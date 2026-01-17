@@ -698,10 +698,9 @@
                 10 AI prompts that actually help with the mental load. Meal planning, teacher emails, kid questions, boundary scripts — real solutions for the invisible stuff you manage every day.
             </p>
             
-            <form class="hero-form fade-in fade-in-delay-3" id="get-it">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Send Me the Guide</button>
-            </form>
+            <div class="fade-in fade-in-delay-3" id="get-it">
+                <iframe src="https://subscribe-forms.beehiiv.com/72a4487f-b417-4a49-969c-30e4ccf09f29" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; max-width: 500px; height: 52px; margin: 0; border-radius: 0px; background-color: transparent;"></iframe>
+            </div>
             <p class="hero-note fade-in fade-in-delay-4"><strong>Free download.</strong> No spam, just actual help.</p>
         </div>
         
@@ -822,10 +821,9 @@ Skip anything complicated — I need to feed people, not impress a cooking show.
             <h2>Ready to <span>get your brain back</span>?</h2>
             <p>Join thousands of moms using AI to lighten the mental load. Free guide, instant download.</p>
             
-            <form class="hero-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Send Me the Guide</button>
-            </form>
+            <div style="display: flex; justify-content: center;">
+                <iframe src="https://subscribe-forms.beehiiv.com/72a4487f-b417-4a49-969c-30e4ccf09f29" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; max-width: 500px; height: 52px; margin: 0; border-radius: 0px; background-color: transparent;"></iframe>
+            </div>
             <p class="hero-note">Free. No spam. Unsubscribe anytime.</p>
         </div>
     </section>
@@ -836,44 +834,8 @@ Skip anything complicated — I need to feed people, not impress a cooking show.
         <p>AI-powered relief for the mental load</p>
     </footer>
     
+    <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
     <script>
-        // Beehiiv form integration
-        const BEEHIIV_FORM_ID = '72a4487f-b417-4a49-969c-30e4ccf09f29';
-
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                const email = this.querySelector('input[type="email"]').value;
-                const button = this.querySelector('button');
-                const originalText = button.textContent;
-
-                button.textContent = 'Sending...';
-                button.disabled = true;
-
-                try {
-                    const formData = new FormData();
-                    formData.append('email', email);
-
-                    const response = await fetch(`https://subscribe-forms.beehiiv.com/${BEEHIIV_FORM_ID}`, {
-                        method: 'POST',
-                        body: formData
-                    });
-
-                    button.textContent = 'Check your inbox!';
-                    this.reset();
-                } catch (error) {
-                    console.error('Error:', error);
-                    button.textContent = 'Check your inbox!';
-                    this.reset();
-                }
-
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.disabled = false;
-                }, 3000);
-            });
-        });
-        
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
