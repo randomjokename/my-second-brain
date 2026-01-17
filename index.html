@@ -77,6 +77,33 @@
             opacity: 0.2;
         }
         
+        /* Announcement Bar */
+        .announcement-bar {
+            background: var(--coral);
+            color: white;
+            text-align: center;
+            padding: 1rem 2rem;
+            font-size: 1.4rem;
+        }
+
+        .announcement-bar p {
+            margin: 0;
+        }
+
+        .announcement-bar strong {
+            font-weight: 600;
+        }
+
+        .announcement-bar a {
+            color: white;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .announcement-bar a:hover {
+            text-decoration: none;
+        }
+
         /* Navigation */
         nav {
             padding: 1.5rem 2rem;
@@ -681,6 +708,11 @@
     </style>
 </head>
 <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>Get <strong>50% off</strong> your first Prompt Pack — <a href="#">Coming Soon</a></p>
+    </div>
+
     <!-- Navigation -->
     <nav>
         <a href="#" class="logo"><img src="logo.png" alt="My Second Brain" width="200"></a>
