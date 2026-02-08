@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 AI Prompts That'll Give You Your Brain Back — My Second Brain</title>
+
+    <!-- SEO -->
+    <meta name="description" content="10 free AI prompts designed for moms dealing with the mental load. Copy, paste, customize — get real solutions for meal planning, emails, boundaries, and more.">
+    <meta name="theme-color" content="#5B7B6D">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="og-image.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mysecondbrain.xyz/guide">
+    <meta property="og:title" content="10 AI Prompts That'll Give You Your Brain Back">
+    <meta property="og:description" content="Free guide: 10 AI prompts designed for moms dealing with the mental load. Real solutions for the invisible stuff you manage every day.">
+    <meta property="og:image" content="https://mysecondbrain.xyz/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="10 AI Prompts That'll Give You Your Brain Back">
+    <meta name="twitter:description" content="Free guide: 10 AI prompts designed for moms dealing with the mental load.">
+    <meta name="twitter:image" content="https://mysecondbrain.xyz/og-image.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #5B7B6D;
+            --sage-light: #7A9A8C;
+            --sage-pale: #D4E2DB;
+            --sage-wash: #EEF4F1;
+            --cream: #FAF8F5;
+            --cream-dark: #F5F1EB;
+            --coral: #E8A598;
+            --coral-deep: #D4877A;
+            --charcoal: #2D3436;
+            --charcoal-light: #4A5154;
+            --gray: #636E72;
+            --gray-light: #B2BEC3;
+            --toc-width: 260px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            font-size: 18px;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  NAVIGATION                                 */
+        /* ═══════════════════════════════════════════ */
+        .guide-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 226, 219, 0.5);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .guide-nav.scrolled {
+            box-shadow: 0 2px 20px rgba(45, 52, 54, 0.06);
+        }
+
+        .guide-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo svg { width: 44px; height: 44px; flex-shrink: 0; }
+
+        .logo-wordmark {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            letter-spacing: -0.3px;
+            line-height: 1.15;
+        }
+
+        .logo-wordmark em { font-style: italic; font-weight: 500; }
+
+        .nav-cta {
+            background: var(--sage);
+            color: white;
+            padding: 0.65rem 1.35rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-light);
+            transform: translateY(-1px);
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  LAYOUT: TOC + MAIN                         */
+        /* ═══════════════════════════════════════════ */
+        .guide-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0;
+            position: relative;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  SIDEBAR TOC (Desktop)                      */
+        /* ═══════════════════════════════════════════ */
+        .toc-sidebar {
+            width: var(--toc-width);
+            flex-shrink: 0;
+            display: none;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 90px;
+            padding: 2rem 0 2rem 2rem;
+            max-height: calc(100vh - 100px);
+            overflow-y: auto;
+        }
+
+        .toc-sticky::-webkit-scrollbar { width: 3px; }
+        .toc-sticky::-webkit-scrollbar-thumb { background: var(--sage-pale); border-radius: 3px; }
+
+        .toc-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--gray-light);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            color: var(--gray);
+            font-weight: 400;
+            transition: all 0.2s ease;
+            line-height: 1.35;
+        }
+
+        .toc-list a:hover {
+            background: var(--sage-wash);
+            color: var(--sage);
+        }
+
+        .toc-list a.active {
+            background: var(--sage-wash);
+            color: var(--sage);
+            font-weight: 600;
+        }
+
+        .toc-emoji {
+            font-size: 0.95rem;
+            flex-shrink: 0;
+            width: 22px;
+            text-align: center;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  MOBILE TOC (FAB)                           */
+        /* ═══════════════════════════════════════════ */
+        .toc-fab {
+            display: none;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 90;
+            width: 54px;
+            height: 54px;
+            background: var(--sage);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(91, 123, 109, 0.35);
+            transition: all 0.3s ease;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .toc-fab:hover { transform: scale(1.08); }
+
+        .toc-fab-panel {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 16px;
+            left: 16px;
+            z-index: 89;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(45, 52, 54, 0.15);
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .toc-fab-panel.open { display: block; }
+
+        .toc-fab-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(45, 52, 54, 0.3);
+            z-index: 88;
+        }
+
+        .toc-fab-overlay.open { display: block; }
+
+        .toc-fab-panel .toc-list a {
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  MAIN CONTENT                               */
+        /* ═══════════════════════════════════════════ */
+        .guide-main {
+            flex: 1;
+            min-width: 0;
+            padding: 0 2rem;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  HERO                                       */
+        /* ═══════════════════════════════════════════ */
+        .guide-hero {
+            padding: 5rem 0 4rem;
+            position: relative;
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .guide-hero::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -180px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--sage-pale) 0%, transparent 70%);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .guide-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: -160px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--coral) 0%, transparent 70%);
+            opacity: 0.12;
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--coral-deep);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .hero-eyebrow::before,
+        .hero-eyebrow::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 32px;
+            height: 1px;
+            background: var(--coral);
+            opacity: 0.5;
+        }
+        .hero-eyebrow::before { right: calc(100% + 14px); }
+        .hero-eyebrow::after { left: calc(100% + 14px); }
+
+        .guide-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            color: var(--charcoal);
+            margin-bottom: 1.25rem;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .guide-hero h1 em {
+            font-style: italic;
+            color: var(--sage);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            font-weight: 300;
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .hero-orbit {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            opacity: 0.6;
+        }
+
+        .hero-divider {
+            width: 48px;
+            height: 2px;
+            background: var(--coral);
+            margin: 0 auto;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  HOW TO USE                                 */
+        /* ═══════════════════════════════════════════ */
+        .howto-section {
+            max-width: 680px;
+            margin: 0 auto 4rem;
+            padding: 3rem 0;
+        }
+
+        .howto-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+
+        .howto-intro {
+            color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+        }
+
+        .howto-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .howto-step {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .howto-step-num {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--sage-pale);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 36px;
+            margin-top: 2px;
+        }
+
+        .howto-step-content h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 4px;
+        }
+
+        .howto-step-content p {
+            font-size: 0.98rem;
+            color: var(--gray);
+            line-height: 1.65;
+            font-weight: 300;
+        }
+
+        .howto-closing {
+            background: var(--sage-wash);
+            border-left: 3px solid var(--sage-pale);
+            border-radius: 0 12px 12px 0;
+            padding: 1.25rem 1.5rem;
+            font-size: 0.98rem;
+            color: var(--sage);
+            line-height: 1.65;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  PROMPT GRID (Overview)                     */
+        /* ═══════════════════════════════════════════ */
+        .prompts-overview {
+            max-width: 720px;
+            margin: 0 auto 5rem;
+            padding: 3rem 0 0;
+            border-top: 1px solid var(--sage-pale);
+        }
+
+        .prompts-overview h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .prompts-overview-sub {
+            text-align: center;
+            color: var(--gray);
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+        }
+
+        .prompts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .prompts-grid a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 0.92rem;
+            font-weight: 400;
+            background: white;
+            border: 1px solid var(--cream-dark);
+            transition: all 0.25s ease;
+        }
+
+        .prompts-grid a:hover {
+            border-color: var(--sage-pale);
+            box-shadow: 0 4px 16px rgba(91, 123, 109, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .prompts-grid .grid-emoji {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .prompts-grid .grid-num {
+            font-size: 0.72rem;
+            color: var(--gray-light);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  PROMPT SECTIONS                            */
+        /* ═══════════════════════════════════════════ */
+        .prompt-section {
+            max-width: 720px;
+            margin: 0 auto 5rem;
+            scroll-margin-top: 100px;
+        }
+
+        .prompt-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.25rem;
+        }
+
+        .prompt-number {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--coral-deep);
+        }
+
+        .prompt-number-line {
+            flex: 1;
+            height: 1px;
+            background: var(--cream-dark);
+        }
+
+        .prompt-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt-section h2 {
+            font-size: 1.7rem;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.3px;
+        }
+
+        .prompt-problem {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .prompt-problem-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sage-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt-problem p {
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--gray);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* The prompt box */
+        .prompt-box-wrapper {
+            margin-bottom: 2rem;
+        }
+
+        .prompt-box-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .prompt-box-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sage);
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border: 1.5px solid var(--sage-pale);
+            background: white;
+            border-radius: 100px;
+            font-family: inherit;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--sage);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .copy-btn:hover {
+            background: var(--sage-wash);
+            border-color: var(--sage-light);
+        }
+
+        .copy-btn.copied {
+            background: var(--sage);
+            border-color: var(--sage);
+            color: white;
+        }
+
+        .copy-btn svg {
+            width: 14px;
+            height: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn .icon-check { display: none; }
+        .copy-btn.copied .icon-copy { display: none; }
+        .copy-btn.copied .icon-check { display: block; }
+
+        .prompt-box {
+            background: var(--sage-wash);
+            border-left: 4px solid var(--sage);
+            border-radius: 0 16px 16px 0;
+            padding: 1.5rem 1.75rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--charcoal);
+            white-space: pre-wrap;
+            font-family: 'Source Sans 3', sans-serif;
+            position: relative;
+        }
+
+        .prompt-box .bracket {
+            color: var(--coral-deep);
+            font-weight: 500;
+        }
+
+        /* Why it works */
+        .prompt-why {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: white;
+            border: 1px solid var(--cream-dark);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+        }
+
+        .prompt-why-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .prompt-why-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--sage);
+            margin-bottom: 4px;
+        }
+
+        .prompt-why p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  CLOSING / CTA                              */
+        /* ═══════════════════════════════════════════ */
+        .closing-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 4rem 0 6rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .closing-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 48px;
+            height: 2px;
+            background: var(--coral);
+        }
+
+        .closing-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 2rem;
+            opacity: 0.5;
+        }
+
+        .closing-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .closing-section h2 em {
+            font-style: italic;
+            color: var(--sage);
+        }
+
+        .closing-text {
+            font-size: 1.05rem;
+            color: var(--gray);
+            line-height: 1.7;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .closing-cta {
+            display: inline-block;
+            background: var(--sage);
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin-bottom: 2.5rem;
+        }
+
+        .closing-cta:hover {
+            background: var(--sage-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(91, 123, 109, 0.25);
+        }
+
+        .closing-quote {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--sage);
+            line-height: 1.5;
+            margin-bottom: 2.5rem;
+        }
+
+        .closing-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .closing-brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .closing-brand-logo svg { width: 22px; height: 22px; }
+
+        .closing-brand-logo span {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--charcoal);
+        }
+
+        .closing-brand-logo span em { font-style: italic; font-weight: 500; }
+
+        .closing-brand-tagline {
+            font-size: 0.8rem;
+            color: var(--gray-light);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  FOOTER                                     */
+        /* ═══════════════════════════════════════════ */
+        .guide-footer {
+            background: var(--charcoal);
+            color: var(--gray-light);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-logo em { font-style: italic; font-weight: 500; }
+
+        .guide-footer p { font-size: 0.9rem; }
+
+        /* ═══════════════════════════════════════════ */
+        /*  BACK TO TOP                                */
+        /* ═══════════════════════════════════════════ */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 80;
+            width: 42px;
+            height: 42px;
+            background: white;
+            border: 1.5px solid var(--sage-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            box-shadow: 0 2px 12px rgba(45, 52, 54, 0.08);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            background: var(--sage-wash);
+            border-color: var(--sage-light);
+        }
+
+        .back-to-top svg {
+            width: 18px;
+            height: 18px;
+            color: var(--sage);
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  SCROLL ANIMATIONS                          */
+        /* ═══════════════════════════════════════════ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* stagger children */
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .reveal-stagger.visible > * { opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.05s; }
+        .reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; }
+        .reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.15s; }
+        .reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.2s; }
+        .reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.25s; }
+        .reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.3s; }
+        .reveal-stagger.visible > *:nth-child(7) { transition-delay: 0.35s; }
+        .reveal-stagger.visible > *:nth-child(8) { transition-delay: 0.4s; }
+        .reveal-stagger.visible > *:nth-child(9) { transition-delay: 0.45s; }
+        .reveal-stagger.visible > *:nth-child(10) { transition-delay: 0.5s; }
+
+        /* ═══════════════════════════════════════════ */
+        /*  RESPONSIVE                                 */
+        /* ═══════════════════════════════════════════ */
+        @media (min-width: 1080px) {
+            .toc-sidebar { display: block; }
+            .toc-fab { display: none !important; }
+            .guide-main { padding: 0 3rem 0 2rem; }
+        }
+
+        @media (max-width: 1079px) {
+            .toc-fab { display: flex; }
+            .guide-main { padding: 0 2rem; }
+        }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+
+            .guide-nav-inner { padding: 0.85rem 1.25rem; }
+            .logo svg { width: 36px; height: 36px; }
+            .logo-wordmark { font-size: 1.2rem; }
+            .nav-cta { padding: 0.55rem 1.1rem; font-size: 0.82rem; }
+
+            .guide-main { padding: 0 1.25rem; }
+
+            .guide-hero { padding: 3rem 0 2.5rem; }
+            .guide-hero h1 { font-size: 1.9rem; }
+            .hero-subtitle { font-size: 1.05rem; }
+            .hero-orbit { width: 56px; height: 56px; }
+
+            .howto-section { padding: 2rem 0; }
+            .howto-section h2 { font-size: 1.5rem; }
+
+            .prompts-grid { grid-template-columns: 1fr; }
+
+            .prompt-section h2 { font-size: 1.4rem; }
+            .prompt-box { padding: 1.25rem 1.25rem; font-size: 0.9rem; }
+
+            .closing-section { padding: 3rem 0 4rem; }
+            .closing-section h2 { font-size: 1.6rem; }
+
+            .back-to-top { left: 16px; bottom: 16px; width: 38px; height: 38px; }
+            .toc-fab { bottom: 16px; right: 16px; width: 48px; height: 48px; font-size: 1.15rem; }
+        }
+        /* ═══════════════════════════════════════════ */
+        /*  PRINT STYLES                               */
+        /* ═══════════════════════════════════════════ */
+        @media print {
+            body { background: white; font-size: 14px; }
+            .guide-nav, .toc-sidebar, .toc-fab, .toc-fab-panel, .toc-fab-overlay,
+            .back-to-top, .copy-btn, .prompts-overview, .closing-cta,
+            button[onclick="window.print()"] { display: none !important; }
+
+            .guide-layout { display: block; }
+            .guide-main { padding: 0 0.5in; }
+            .guide-hero { padding: 2rem 0; }
+            .guide-hero::before, .guide-hero::after { display: none; }
+            .closing-section::before { display: none; }
+
+            .prompt-section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 2rem;
+                padding-top: 1rem;
+            }
+
+            .prompt-box {
+                border-radius: 0 8px 8px 0;
+                font-size: 12px;
+                padding: 1rem 1.25rem;
+            }
+
+            .reveal, .reveal-stagger > * {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            .guide-footer { padding: 1.5rem; }
+
+            a { text-decoration: none; color: inherit; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════ NAVIGATION ═══════════════════════ -->
+<nav class="guide-nav">
+    <div class="guide-nav-inner">
+        <a href="/" class="logo">
+            <svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+            <span class="logo-wordmark">My <em>Second Brain</em></span>
+        </a>
+        <a href="/" class="nav-cta">Get More Prompts</a>
+    </div>
+</nav>
+
+<!-- ═══════════════════════ LAYOUT ═══════════════════════ -->
+<div class="guide-layout">
+
+    <!-- Sidebar TOC (desktop) -->
+    <aside class="toc-sidebar">
+        <div class="toc-sticky">
+            <div class="toc-label">In This Guide</div>
+            <ul class="toc-list" id="toc-desktop">
+                <li><a href="#prompt-1"><span class="toc-emoji">🍳</span> The Dinner Solver</a></li>
+                <li><a href="#prompt-2"><span class="toc-emoji">✉️</span> The Email</a></li>
+                <li><a href="#prompt-3"><span class="toc-emoji">💬</span> Hard Conversations</a></li>
+                <li><a href="#prompt-4"><span class="toc-emoji">🎈</span> Party Planner</a></li>
+                <li><a href="#prompt-5"><span class="toc-emoji">📚</span> Homework Helper</a></li>
+                <li><a href="#prompt-6"><span class="toc-emoji">🧘</span> Brain Dump</a></li>
+                <li><a href="#prompt-7"><span class="toc-emoji">🗓️</span> Week Planner</a></li>
+                <li><a href="#prompt-8"><span class="toc-emoji">🤔</span> Decision Maker</a></li>
+                <li><a href="#prompt-9"><span class="toc-emoji">💪</span> Boundary Script</a></li>
+                <li><a href="#prompt-10"><span class="toc-emoji">✨</span> Explain Like I'm 5</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="guide-main">
+
+        <!-- HERO -->
+        <header class="guide-hero">
+            <svg class="hero-orbit" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+            <div class="hero-eyebrow">Free Guide</div>
+            <h1>10 AI Prompts That'll Give You Your <em>Brain Back</em></h1>
+            <p class="hero-subtitle">Real solutions for the mental load stuff nobody thanks you for</p>
+            <div class="hero-divider"></div>
+        </header>
+
+        <!-- HOW TO USE -->
+        <section class="howto-section reveal">
+            <h2>How to use this guide</h2>
+            <p class="howto-intro">These aren't generic AI tips. Each prompt is designed for a specific, real situation — the kind that takes up way too much space in your head. Here's how to get the most out of them:</p>
+
+            <div class="howto-steps">
+                <div class="howto-step">
+                    <div class="howto-step-num">1</div>
+                    <div class="howto-step-content">
+                        <h3>Pick the prompt that matches what's bugging you right now</h3>
+                        <p>Don't try all 10 at once. Start with the one that makes you go "oh, <em>THAT</em> one."</p>
+                    </div>
+                </div>
+                <div class="howto-step">
+                    <div class="howto-step-num">2</div>
+                    <div class="howto-step-content">
+                        <h3>Copy it into ChatGPT, Claude, or any AI tool</h3>
+                        <p>Paste the prompt exactly as written. Then fill in the [brackets] with YOUR specific details. The more specific you are, the better the answer.</p>
+                    </div>
+                </div>
+                <div class="howto-step">
+                    <div class="howto-step-num">3</div>
+                    <div class="howto-step-content">
+                        <h3>Customize and iterate</h3>
+                        <p>The first answer is your starting point. Say "make it shorter," "more casual," or "try again but for a 4-year-old." It gets better the more you talk to it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="howto-closing">
+                That's it. No complicated setup. No tech skills needed. Just copy, paste, and get your brain back.
+            </div>
+        </section>
+
+        <!-- PROMPTS OVERVIEW GRID -->
+        <section class="prompts-overview reveal">
+            <h2>What's inside</h2>
+            <p class="prompts-overview-sub">Click any prompt to jump straight to it.</p>
+            <div class="prompts-grid reveal-stagger">
+                <a href="#prompt-1"><span class="grid-emoji">🍳</span><span><span class="grid-num">#1</span> The "What's For Dinner" Solver</span></a>
+                <a href="#prompt-2"><span class="grid-emoji">✉️</span><span><span class="grid-num">#2</span> The Email You've Been Avoiding</span></a>
+                <a href="#prompt-3"><span class="grid-emoji">💬</span><span><span class="grid-num">#3</span> The Hard Conversation Script</span></a>
+                <a href="#prompt-4"><span class="grid-emoji">🎈</span><span><span class="grid-num">#4</span> The Party Planner</span></a>
+                <a href="#prompt-5"><span class="grid-emoji">📚</span><span><span class="grid-num">#5</span> The Homework Helper</span></a>
+                <a href="#prompt-6"><span class="grid-emoji">🧘</span><span><span class="grid-num">#6</span> The Brain Dump Organizer</span></a>
+                <a href="#prompt-7"><span class="grid-emoji">🗓️</span><span><span class="grid-num">#7</span> The Week Ahead Planner</span></a>
+                <a href="#prompt-8"><span class="grid-emoji">🤔</span><span><span class="grid-num">#8</span> The Decision Maker</span></a>
+                <a href="#prompt-9"><span class="grid-emoji">💪</span><span><span class="grid-num">#9</span> The Boundary Script</span></a>
+                <a href="#prompt-10"><span class="grid-emoji">✨</span><span><span class="grid-num">#10</span> The "Explain It Like I'm 5" Translator</span></a>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 1 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-1">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #1</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">🍳</div>
+            <h2>The "What's For Dinner" Solver</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>It's 5pm. You're staring at the fridge. Nothing sounds good. Everyone's hungry. The decision fatigue is real.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-1-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-1-text">I need dinner ideas for tonight. Here's what I'm working with:
+
+What's in my fridge: <span class="bracket">[list what you actually have]</span>
+Dietary needs: <span class="bracket">[allergies, picky eaters]</span>
+How much time I have: <span class="bracket">[be realistic]</span>
+How much energy I have: <span class="bracket">[low/medium/high]</span>
+
+Give me 3 realistic options, ranked easiest to hardest. Skip anything complicated — I need to feed people, not impress a cooking show.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>You're not asking for generic recipes. You're telling it YOUR constraints and getting personalized solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 2 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-2">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #2</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">✉️</div>
+            <h2>The Email You've Been Avoiding</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>There's an email in your drafts (or your head) that you've been rewriting for days. Teacher, school admin, another parent — you need to be firm but not aggressive, clear but not cold.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-2-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-2-text">Help me write an email about <span class="bracket">[situation]</span>.
+
+Who it's to: <span class="bracket">[teacher/admin/parent/etc.]</span>
+What I need to communicate: <span class="bracket">[the main point]</span>
+Tone I want: <span class="bracket">[firm but kind / casual / professional / concerned]</span>
+What I want to avoid: <span class="bracket">[sounding aggressive, being too passive, etc.]</span>
+
+Keep it under <span class="bracket">[X]</span> sentences. I want to sound like a reasonable human who also isn't going to be pushed around.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>It handles the emotional labor of tone-crafting. You focus on WHAT to say, it handles HOW to say it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 3 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-3">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #3</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">💬</div>
+            <h2>The Hard Conversation Script</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>Your kid just asked something you weren't ready for. Or you need to set a boundary with someone and can't find the words. The stakes feel high and your brain goes blank.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-3-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-3-text">I need to <span class="bracket">[explain something to my kid / set a boundary / have a tough conversation]</span>.
+
+Situation: <span class="bracket">[describe what's happening]</span>
+Who I'm talking to: <span class="bracket">[age of kid / relationship]</span>
+What I want them to understand: <span class="bracket">[the key message]</span>
+What I want to avoid: <span class="bracket">[scaring them, being too harsh, etc.]</span>
+
+Give me 2-3 ways to say this. Keep it <span class="bracket">[age-appropriate / direct / gentle]</span> and give me a follow-up line in case they push back.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>You get multiple options so you can pick what feels right. And the pushback line means you're not caught off guard.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 4 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-4">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #4</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">🎈</div>
+            <h2>The Party Planner</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>You said yes to hosting a birthday party. The date is approaching fast. You haven't planned anything. Pinterest is making it worse.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-4-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-4-text">Help me plan a birthday party.
+
+Child's age: <span class="bracket">[age]</span>
+Theme (if any): <span class="bracket">[theme or 'no theme, keep it simple']</span>
+Number of kids: <span class="bracket">[number]</span>
+Budget: <span class="bracket">[realistic amount]</span>
+My bandwidth: <span class="bracket">[low/medium/high]</span>
+Location: <span class="bracket">[home/park/venue]</span>
+
+Give me:
+- A simple timeline for the party day
+- 3 activity ideas (no elaborate crafts)
+- Food that's easy to prep ahead
+- A checklist of what to buy/do this week
+
+Keep it realistic. I want a fun party, not a production.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>It gives you a complete, actionable plan matched to your ACTUAL bandwidth, not Pinterest's.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 5 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-5">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #5</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">📚</div>
+            <h2>The Homework Helper</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>Your kid needs help and you're either rusty on the subject or struggling to explain it in a way they'll understand. You want to help without doing it for them.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-5-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-5-text">My <span class="bracket">[age]</span>-year-old needs help with <span class="bracket">[subject/topic]</span>.
+
+The specific problem: <span class="bracket">[describe it or paste it]</span>
+What they're struggling with: <span class="bracket">[the concept they don't get]</span>
+How they learn best: <span class="bracket">[visual/examples/step-by-step/stories]</span>
+
+Explain this at their level. Then give me 2-3 guiding questions I can ask them to help them figure it out themselves. Don't give me the answer — give me the teaching approach.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>You're not asking AI to do the homework. You're asking it to make you a better tutor in 30 seconds.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 6 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-6">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #6</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">🧘</div>
+            <h2>The Brain Dump Organizer</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>Your head is full. You can't think straight. Everything feels urgent. You need to get it all out and figure out what actually matters.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-6-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-6-text">I'm going to brain dump everything that's on my mind. Help me sort through it.
+
+<span class="bracket">[Just type everything — stream of consciousness, no organizing needed]</span>
+
+Now sort this into:
+1. Actually urgent (needs action in 24-48 hours)
+2. Important but not urgent (this week)
+3. Can wait (next week or later)
+4. Not yours to carry (delegate, drop, or let go)
+
+For the top 3 urgent items, give me the single next step for each.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>The magic is in category 4. Sometimes you just need permission (from an objective source) to let something go.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 7 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-7">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #7</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">🗓️</div>
+            <h2>The Week Ahead Planner</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>Sunday night dread. The week ahead feels like a wall of obligations and you don't know how you'll get through it. You need a plan but can't think clearly enough to make one.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-7-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-7-text">Help me plan my week. Here's what I'm working with:
+
+Fixed commitments: <span class="bracket">[school times, work hours, appointments]</span>
+Things that MUST happen: <span class="bracket">[deadlines, events, tasks]</span>
+Things I keep pushing off: <span class="bracket">[that thing you've avoided for 2 weeks]</span>
+How I'm feeling: <span class="bracket">[energized/tired/overwhelmed/okay]</span>
+
+Build me a realistic daily plan for Mon-Fri. Leave buffer time. Don't over-schedule me. Flag anything I should consider delegating or skipping entirely.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>It accounts for your energy level, not just your to-do list. And it gives you permission to skip things.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 8 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-8">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #8</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">🤔</div>
+            <h2>The Decision Maker</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>You're going in circles on a decision. Pros and cons are swirling. You've asked three friends and gotten three different answers. You just need clarity.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-8-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-8-text">I'm stuck on a decision and need help thinking it through.
+
+The decision: <span class="bracket">[describe it]</span>
+Option A: <span class="bracket">[first option]</span>
+Option B: <span class="bracket">[second option]</span>
+What matters most to me: <span class="bracket">[priorities — time, money, sanity, kids, etc.]</span>
+What I'm afraid of: <span class="bracket">[the worry that's making this hard]</span>
+
+Give me a quick pros/cons for each option. Then, based on what I said matters most, tell me which one you'd lean toward and why. Be direct.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>You're not asking it to decide for you. You're asking it to organize your own thinking and reflect your priorities back to you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 9 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-9">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #9</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">💪</div>
+            <h2>The Boundary Script</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>You need to say no. Or push back. Or stop volunteering for things that drain you. But every version you rehearse in your head sounds too harsh or too weak.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-9-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-9-text">I need to set a boundary.
+
+Situation: <span class="bracket">[what's happening]</span>
+Who with: <span class="bracket">[relationship — friend, family, school, work]</span>
+What I want to say no to: <span class="bracket">[the specific thing]</span>
+What I'm worried about: <span class="bracket">[their reaction, guilt, judgment]</span>
+
+Give me 3 versions:
+1. Gentle but clear
+2. Firm and direct
+3. Warmly non-negotiable
+
+Keep each under 3 sentences. I want to feel good about sending/saying it, not guilty.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>Three versions means you can choose based on how brave you're feeling. And "warmly non-negotiable" is the energy most moms need.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 10 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-10">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #10</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">✨</div>
+            <h2>The "Explain It Like I'm 5" Translator</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>Your kid asked something big. Where do babies come from? Why do people die? Why is that person homeless? You want to be honest but age-appropriate, and your brain just... stalls.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-10-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-10-text">My <span class="bracket">[age]</span>-year-old just asked: "<span class="bracket">[their actual question]</span>"
+
+I want to be: <span class="bracket">[honest / gentle / age-appropriate / all of the above]</span>
+Our family values: <span class="bracket">[anything relevant — religious, cultural, etc.]</span>
+What I want to avoid: <span class="bracket">[scaring them, oversimplifying, etc.]</span>
+
+Give me a response I can say out loud right now. Keep it short (3-4 sentences max for their age). Then give me a follow-up question I can ask to check their understanding, and one thing to say if they ask "but why?" again.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>It gives you words you can literally say out loud in the moment. Plus the follow-up prep means you're ready for round two.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CLOSING ═══════════ -->
+        <section class="closing-section reveal">
+            <svg class="closing-icon" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+
+            <h2>Want <em>more</em>?</h2>
+            <p class="closing-text">This is just the beginning. We're building prompt packs for specific situations — back to school, holiday survival, newborn fog, and more. Each one designed for the real stuff you're actually dealing with.</p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 2.5rem;">
+                <a href="/" class="closing-cta" style="margin-bottom: 0;">Visit mysecondbrain.xyz</a>
+                <button onclick="window.print()" class="closing-cta" style="margin-bottom: 0; background: white; color: var(--sage); border: 2px solid var(--sage-pale); cursor: pointer; font-family: inherit;">
+                    <svg style="width:16px;height:16px;vertical-align:-2px;margin-right:6px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>Save as PDF
+                </button>
+            </div>
+
+            <p class="closing-quote">"You're doing great. Your brain<br>just needed backup."</p>
+
+            <div class="closing-brand">
+                <div class="closing-brand-logo">
+                    <svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+                    <span>My <em>Second Brain</em></span>
+                </div>
+                <span class="closing-brand-tagline">AI-powered relief for the mental load</span>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="guide-footer">
+    <p class="footer-logo">My <em>Second Brain</em></p>
+    <p>AI-powered relief for the mental load</p>
+</footer>
+
+<!-- Mobile TOC FAB -->
+<button class="toc-fab" id="tocFab" aria-label="Table of contents">☰</button>
+<div class="toc-fab-overlay" id="tocOverlay"></div>
+<div class="toc-fab-panel" id="tocPanel">
+    <div class="toc-label">Jump to a prompt</div>
+    <ul class="toc-list">
+        <li><a href="#prompt-1" class="toc-mobile-link"><span class="toc-emoji">🍳</span> The "What's For Dinner" Solver</a></li>
+        <li><a href="#prompt-2" class="toc-mobile-link"><span class="toc-emoji">✉️</span> The Email You've Been Avoiding</a></li>
+        <li><a href="#prompt-3" class="toc-mobile-link"><span class="toc-emoji">💬</span> The Hard Conversation Script</a></li>
+        <li><a href="#prompt-4" class="toc-mobile-link"><span class="toc-emoji">🎈</span> The Party Planner</a></li>
+        <li><a href="#prompt-5" class="toc-mobile-link"><span class="toc-emoji">📚</span> The Homework Helper</a></li>
+        <li><a href="#prompt-6" class="toc-mobile-link"><span class="toc-emoji">🧘</span> The Brain Dump Organizer</a></li>
+        <li><a href="#prompt-7" class="toc-mobile-link"><span class="toc-emoji">🗓️</span> The Week Ahead Planner</a></li>
+        <li><a href="#prompt-8" class="toc-mobile-link"><span class="toc-emoji">🤔</span> The Decision Maker</a></li>
+        <li><a href="#prompt-9" class="toc-mobile-link"><span class="toc-emoji">💪</span> The Boundary Script</a></li>
+        <li><a href="#prompt-10" class="toc-mobile-link"><span class="toc-emoji">✨</span> The "Explain It Like I'm 5" Translator</a></li>
+    </ul>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+    // ─── Copy to clipboard ───
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-prompt');
+            const box = document.getElementById(targetId);
+            const text = box.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.classList.add('copied');
+                btn.querySelector('.copy-label').textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.querySelector('.copy-label').textContent = 'Copy';
+                }, 2000);
+            });
+        });
+    });
+
+    // ─── Scroll reveal ───
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // ─── Active TOC tracking ───
+    const sections = document.querySelectorAll('.prompt-section');
+    const tocLinks = document.querySelectorAll('#toc-desktop a');
+
+    const tocObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                tocLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+                });
+            }
+        });
+    }, { threshold: 0.2, rootMargin: '-80px 0px -50% 0px' });
+
+    sections.forEach(section => tocObserver.observe(section));
+
+    // ─── Nav shadow on scroll ───
+    const nav = document.querySelector('.guide-nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ─── Back to top ───
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        backBtn.classList.toggle('visible', window.scrollY > 600);
+    }, { passive: true });
+    backBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ─── Mobile TOC ───
+    const tocFab = document.getElementById('tocFab');
+    const tocPanel = document.getElementById('tocPanel');
+    const tocOverlay = document.getElementById('tocOverlay');
+
+    function closeToc() {
+        tocPanel.classList.remove('open');
+        tocOverlay.classList.remove('open');
+    }
+
+    tocFab.addEventListener('click', () => {
+        const isOpen = tocPanel.classList.contains('open');
+        if (isOpen) {
+            closeToc();
+        } else {
+            tocPanel.classList.add('open');
+            tocOverlay.classList.add('open');
+        }
+    });
+
+    tocOverlay.addEventListener('click', closeToc);
+
+    document.querySelectorAll('.toc-mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            closeToc();
+        });
+    });
+</script>
+
+</body>
+</html>
