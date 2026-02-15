@@ -1,0 +1,21 @@
+# My Second Brain — robots.txt
+User-agent: *
+Allow: /
+
+# Paid content (noindex already set, but belt & suspenders)
+Disallow: /packs/back-to-school.html
+Disallow: /packs/holiday-survival.html
+Disallow: /packs/newborn-fog.html
+Disallow: /packs/summer-break.html
+Disallow: /packs/meal-planning.html
+
+# Utility pages
+Disallow: /lead-magnet.html
+Disallow: /og-image.html
+Disallow: /logo-concepts.html
+Disallow: /logo-fonts.html
+Disallow: /logo-icons.html
+Disallow: /logo-layouts.html
+Disallow: /logo-orbit.html
+
+Sitemap: https://mysecondbrain.xyz/sitemap.xml

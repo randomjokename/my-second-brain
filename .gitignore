@@ -1,2 +1,9 @@
 .DS_Store
 *.log
+
+# Logo exploration scratch files
+logo-concepts.html
+logo-fonts.html
+logo-icons.html
+logo-layouts.html
+logo-orbit.html
