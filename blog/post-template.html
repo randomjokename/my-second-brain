@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!-- EDIT: Post Title --> — My Second Brain</title>
+
+    <!-- SEO -->
+    <meta name="description" content="<!-- EDIT: Post meta description, 150-160 characters -->">
+    <meta name="theme-color" content="#5B7B6D">
+    <meta name="robots" content="noindex, nofollow"><!-- Remove this line when publishing -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../og-image.png">
+
+    <!-- Open Graph (Facebook, iMessage, Slack, etc.) -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mysecondbrain.xyz/blog/<!-- EDIT: slug -->.html">
+    <meta property="og:title" content="<!-- EDIT: Post Title --> — My Second Brain">
+    <meta property="og:description" content="<!-- EDIT: Post meta description -->">
+    <meta property="og:image" content="https://mysecondbrain.xyz/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="My Second Brain">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<!-- EDIT: Post Title --> — My Second Brain">
+    <meta name="twitter:description" content="<!-- EDIT: Post meta description -->">
+    <meta name="twitter:image" content="https://mysecondbrain.xyz/og-image.png">
+
+    <link rel="canonical" href="https://mysecondbrain.xyz/blog/<!-- EDIT: slug -->.html">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "<!-- EDIT: Post Title -->",
+        "description": "<!-- EDIT: Post meta description -->",
+        "url": "https://mysecondbrain.xyz/blog/<!-- EDIT: slug -->.html",
+        "datePublished": "<!-- EDIT: YYYY-MM-DD -->",
+        "author": {
+            "@type": "Organization",
+            "name": "My Second Brain"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "My Second Brain",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://mysecondbrain.xyz/og-image.png"
+            }
+        }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #5B7B6D;
+            --sage-light: #7A9A8C;
+            --sage-pale: #D4E2DB;
+            --sage-wash: #EEF4F1;
+            --cream: #FAF8F5;
+            --cream-dark: #F5F1EB;
+            --coral: #E8A598;
+            --coral-deep: #D4877A;
+            --charcoal: #2D3436;
+            --charcoal-light: #4A5154;
+            --gray: #636E72;
+            --gray-light: #B2BEC3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background-color: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            font-size: 18px;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .logo svg {
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+        }
+
+        .logo-wordmark {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.85rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            letter-spacing: -0.3px;
+            line-height: 1.15;
+        }
+
+        .logo-wordmark em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-light);
+            transform: translateY(-2px);
+        }
+
+        /* Article Header */
+        .article-header {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.92rem;
+            color: var(--sage);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--sage-light);
+        }
+
+        .article-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--coral-deep);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .article-header h1 {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .article-meta {
+            font-size: 0.92rem;
+            color: var(--gray-light);
+            margin-bottom: 3rem;
+        }
+
+        /* Article Body */
+        .article-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .article-body p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.6rem;
+            margin: 3rem 0 1rem;
+            color: var(--charcoal);
+        }
+
+        .article-body h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            margin: 2rem 0 0.75rem;
+            color: var(--charcoal);
+        }
+
+        .article-body blockquote {
+            border-left: 4px solid var(--sage);
+            background: var(--sage-wash);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--gray);
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+            color: var(--charcoal);
+        }
+
+        .article-body img {
+            max-width: 100%;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+
+        /* Related CTA */
+        .related-cta {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .related-cta-box {
+            background: var(--sage-wash);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .related-cta-box h2 {
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+        }
+
+        .related-cta-box p {
+            font-size: 1.05rem;
+            color: var(--gray);
+            margin-bottom: 1.75rem;
+            line-height: 1.7;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .related-cta-box .cta-button {
+            display: inline-block;
+            background: var(--sage);
+            color: white;
+            padding: 1rem 2.25rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .related-cta-box .cta-button:hover {
+            background: var(--sage-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(91, 123, 109, 0.3);
+        }
+
+        .related-cta-box .alt-link {
+            display: block;
+            font-size: 0.92rem;
+            color: var(--sage);
+            text-decoration: none;
+            border-bottom: 1px solid var(--sage-pale);
+            display: inline;
+            transition: all 0.2s ease;
+        }
+
+        .related-cta-box .alt-link:hover {
+            color: var(--sage-light);
+            border-bottom-color: var(--sage-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--gray-light);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .footer-tagline {
+            font-size: 0.9rem;
+            color: var(--gray-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: var(--gray-light);
+            text-decoration: none;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(178, 190, 195, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: white;
+            border-bottom-color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+            }
+
+            nav {
+                padding: 1rem 1.25rem;
+            }
+
+            .logo-wordmark {
+                font-size: 1.4rem;
+            }
+
+            .logo svg {
+                width: 42px;
+                height: 42px;
+            }
+
+            .nav-cta {
+                padding: 0.6rem 1.25rem;
+                font-size: 0.9rem;
+            }
+
+            .article-header {
+                padding: 1.5rem 1.25rem 0;
+            }
+
+            .article-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .article-body {
+                padding: 0 1.25rem 3rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.35rem;
+            }
+
+            .article-body h3 {
+                font-size: 1.15rem;
+            }
+
+            .related-cta {
+                padding: 0 1.25rem 3rem;
+            }
+
+            .related-cta-box {
+                padding: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="logo">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="26" cy="26" r="5" fill="#5B7B6D"/>
+                <circle cx="25" cy="25" r="2" fill="#7A9A8C"/>
+                <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/>
+                <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/>
+                <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/>
+                <circle cx="40" cy="18" r="2.8" fill="#E8A598"/>
+                <circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/>
+                <circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/>
+            </svg>
+            <span class="logo-wordmark">My <em>Second Brain</em></span>
+        </a>
+        <a href="/" class="nav-cta">Get the Free Guide</a>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+        <span class="article-category"><!-- EDIT: Category, e.g. "Getting Started" --></span>
+        <h1>Your Post Title Here</h1>
+        <p class="article-meta">January 15, 2025 &middot; 5 min read</p>
+    </header>
+
+    <!-- Article Body -->
+    <div class="article-body">
+        <p>This is your opening paragraph. Set the scene, hook the reader, and make them feel seen. A good blog intro for this audience acknowledges the real, messy, beautiful chaos of managing a household and a life — then promises something useful.</p>
+
+        <h2>This Is a Section Heading</h2>
+
+        <p>Use these section headings to break your post into scannable chunks. Most readers skim first, then go back and read the parts that matter to them. Keep paragraphs short — three to four sentences max.</p>
+
+        <blockquote>
+            This is a blockquote. Use it for callouts, key takeaways, or to highlight something the reader should remember. It stands out visually without shouting.
+        </blockquote>
+
+        <ul>
+            <li>Bullet points are great for lists of tips, steps, or examples</li>
+            <li>Keep each item concise — one idea per bullet</li>
+            <li>Three to five items is the sweet spot for readability</li>
+            <li>End with the strongest or most actionable point</li>
+        </ul>
+
+        <h3>This Is a Sub-Heading</h3>
+
+        <p>Use sub-headings when you need to go one level deeper within a section. They keep longer posts organized and help readers find exactly what they need. Remember, your readers are busy — structure is a kindness.</p>
+    </div>
+
+    <!-- Related CTA -->
+    <div class="related-cta">
+        <div class="related-cta-box">
+            <h2>Want the full prompt pack?</h2>
+            <p>Get ready-to-use AI prompts for meals, emails, boundaries, kid questions, and everything else on your plate.</p>
+            <a href="/packs/" class="cta-button">Browse Prompt Packs</a>
+            <br>
+            <a href="/guide.html" class="alt-link">Start with the free guide</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-logo">My <em>Second Brain</em></p>
+        <p class="footer-tagline">AI-powered relief for the mental load</p>
+        <nav class="footer-nav">
+            <a href="/">Home</a>
+            <a href="/packs/">Prompt Packs</a>
+            <a href="/guide.html">Free Guide</a>
+        </nav>
+    </footer>
+</body>
+</html>

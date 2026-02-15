@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Packs — My Second Brain</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Premium AI prompt packs for moms. Meal planning, back to school, holidays, newborn life, and summer break — real solutions for the real stuff.">
+    <meta name="theme-color" content="#5B7B6D">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../og-image.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mysecondbrain.xyz/packs/">
+    <meta property="og:title" content="Prompt Packs — My Second Brain">
+    <meta property="og:description" content="Premium AI prompt packs for moms. Meal planning, back to school, holidays, newborn life, and summer break — real solutions for the real stuff.">
+    <meta property="og:image" content="https://mysecondbrain.xyz/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="My Second Brain">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prompt Packs — My Second Brain">
+    <meta name="twitter:description" content="Premium AI prompt packs for moms. Meal planning, back to school, holidays, newborn life, and summer break — real solutions for the real stuff.">
+    <meta name="twitter:image" content="https://mysecondbrain.xyz/og-image.png">
+
+    <link rel="canonical" href="https://mysecondbrain.xyz/packs/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #5B7B6D;
+            --sage-light: #7A9A8C;
+            --sage-pale: #D4E2DB;
+            --sage-wash: #EEF4F1;
+            --cream: #FAF8F5;
+            --cream-dark: #F5F1EB;
+            --coral: #E8A598;
+            --coral-deep: #D4877A;
+            --charcoal: #2D3436;
+            --charcoal-light: #4A5154;
+            --gray: #636E72;
+            --gray-light: #B2BEC3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background-color: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            font-size: 18px;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        /* ========================================= */
+        /*  NAVIGATION                                */
+        /* ========================================= */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 226, 219, 0.5);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .site-nav.scrolled {
+            box-shadow: 0 2px 20px rgba(45, 52, 54, 0.06);
+        }
+
+        .site-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo svg {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+        }
+
+        .logo-wordmark {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            letter-spacing: -0.3px;
+            line-height: 1.15;
+        }
+
+        .logo-wordmark em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: white;
+            padding: 0.65rem 1.35rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-light);
+            transform: translateY(-1px);
+        }
+
+        /* ========================================= */
+        /*  DECORATIVE BACKGROUND SHAPES              */
+        /* ========================================= */
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bg-shape-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--sage-pale) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+        }
+
+        .bg-shape-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--coral) 0%, transparent 70%);
+            bottom: -100px;
+            left: -100px;
+            opacity: 0.2;
+        }
+
+        /* ========================================= */
+        /*  HERO SECTION                              */
+        /* ========================================= */
+        .hero {
+            position: relative;
+            padding: 5rem 2rem 4rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5.5vw, 3.5rem);
+            color: var(--charcoal);
+            margin-bottom: 1.25rem;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-note {
+            font-size: 0.9rem;
+            color: var(--gray-light);
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ========================================= */
+        /*  PACK GRID                                 */
+        /* ========================================= */
+        .packs-section {
+            padding: 2rem 2rem 6rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .packs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.75rem;
+        }
+
+        .pack-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.25rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--cream-dark);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pack-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .pack-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--sage-wash);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .pack-title {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .pack-description {
+            font-size: 1rem;
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            flex: 1;
+        }
+
+        .pack-badge {
+            display: inline-block;
+            background: var(--sage-wash);
+            color: var(--sage);
+            padding: 0.35rem 0.85rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .pack-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .pack-btn {
+            flex: 1;
+            padding: 0.7rem 1.25rem;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: inherit;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .pack-btn-preview {
+            background: white;
+            color: var(--sage);
+            border: 2px solid var(--sage-pale);
+        }
+
+        .pack-btn-preview:hover {
+            border-color: var(--sage);
+            background: var(--sage-wash);
+            transform: translateY(-1px);
+        }
+
+        .pack-btn-buy {
+            background: var(--sage-pale);
+            color: var(--sage);
+            cursor: default;
+            opacity: 0.85;
+        }
+
+        /* ========================================= */
+        /*  FREE GUIDE CALLOUT                        */
+        /* ========================================= */
+        .free-callout {
+            padding: 0 2rem 6rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .free-callout-inner {
+            background: var(--sage-wash);
+            border-radius: 24px;
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .free-callout-inner::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--sage-pale) 0%, transparent 70%);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .free-callout h2 {
+            font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .free-callout p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 480px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .free-callout-btn {
+            display: inline-block;
+            background: var(--sage);
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .free-callout-btn:hover {
+            background: var(--sage-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(91, 123, 109, 0.25);
+        }
+
+        /* ========================================= */
+        /*  FOOTER                                    */
+        /* ========================================= */
+        .site-footer {
+            background: var(--charcoal);
+            color: var(--gray-light);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-logo em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .site-footer p {
+            font-size: 0.9rem;
+        }
+
+        .footer-nav {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: var(--gray-light);
+            text-decoration: none;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(178, 190, 195, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ========================================= */
+        /*  SCROLL REVEAL ANIMATIONS                  */
+        /* ========================================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .reveal-stagger.visible > * {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.05s; }
+        .reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; }
+        .reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.15s; }
+        .reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.2s; }
+        .reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.25s; }
+
+        /* ========================================= */
+        /*  RESPONSIVE                                */
+        /* ========================================= */
+        @media (max-width: 768px) {
+            .packs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+            }
+
+            .site-nav-inner {
+                padding: 0.85rem 1.25rem;
+            }
+
+            .logo svg {
+                width: 36px;
+                height: 36px;
+            }
+
+            .logo-wordmark {
+                font-size: 1.2rem;
+            }
+
+            .nav-cta {
+                padding: 0.55rem 1.1rem;
+                font-size: 0.82rem;
+            }
+
+            .hero {
+                padding: 3rem 1.25rem 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .packs-section {
+                padding: 1rem 1.25rem 4rem;
+            }
+
+            .pack-card {
+                padding: 1.75rem;
+            }
+
+            .pack-actions {
+                flex-direction: column;
+            }
+
+            .free-callout {
+                padding: 0 1.25rem 4rem;
+            }
+
+            .free-callout-inner {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ======================== NAVIGATION ======================== -->
+<nav class="site-nav">
+    <div class="site-nav-inner">
+        <a href="/" class="logo">
+            <svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+            <span class="logo-wordmark">My <em>Second Brain</em></span>
+        </a>
+        <a href="/" class="nav-cta">Get the Free Guide</a>
+    </div>
+</nav>
+
+<!-- ======================== HERO ======================== -->
+<section class="hero">
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+
+    <h1 class="reveal">Prompt Packs</h1>
+    <p class="hero-subtitle reveal">Premium AI prompts for the specific chaos you're dealing with right now. Each pack tackles one season of the madness with 6 prompts designed to actually help.</p>
+    <p class="hero-note reveal">New packs added regularly. Bookmark this page.</p>
+</section>
+
+<!-- ======================== PACK GRID ======================== -->
+<section class="packs-section">
+    <div class="packs-grid reveal-stagger">
+
+        <!-- Pack 1: Back to School -->
+        <div class="pack-card">
+            <div class="pack-icon">🎒</div>
+            <h3 class="pack-title">Back to School Survival</h3>
+            <p class="pack-description">Get through September without losing your mind. Supply lists, morning routines, teacher emails, and the anxiety game plan.</p>
+            <span class="pack-badge">6 prompts</span>
+            <div class="pack-actions">
+                <a href="back-to-school.html" class="pack-btn pack-btn-preview">Preview</a>
+                <!-- REPLACE: Add Lemon Squeezy checkout button here -->
+                <span class="pack-btn pack-btn-buy">Coming Soon</span>
+            </div>
+        </div>
+
+        <!-- Pack 2: Holiday Survival -->
+        <div class="pack-card">
+            <div class="pack-icon">🎄</div>
+            <h3 class="pack-title">Holiday Survival</h3>
+            <p class="pack-description">Survive the season with your sanity and holiday spirit intact. Gift lists, family drama, schedule chaos, and finding actual joy.</p>
+            <span class="pack-badge">6 prompts</span>
+            <div class="pack-actions">
+                <a href="holiday-survival.html" class="pack-btn pack-btn-preview">Preview</a>
+                <!-- REPLACE: Add Lemon Squeezy checkout button here -->
+                <span class="pack-btn pack-btn-buy">Coming Soon</span>
+            </div>
+        </div>
+
+        <!-- Pack 3: Newborn Fog -->
+        <div class="pack-card">
+            <div class="pack-icon">👶</div>
+            <h3 class="pack-title">Newborn Fog</h3>
+            <p class="pack-description">Navigate the fourth trimester without drowning. Sleep, feeding, visitors, partner communication, and keeping yourself alive.</p>
+            <span class="pack-badge">6 prompts</span>
+            <div class="pack-actions">
+                <a href="newborn-fog.html" class="pack-btn pack-btn-preview">Preview</a>
+                <!-- REPLACE: Add Lemon Squeezy checkout button here -->
+                <span class="pack-btn pack-btn-buy">Coming Soon</span>
+            </div>
+        </div>
+
+        <!-- Pack 4: Summer Break Sanity -->
+        <div class="pack-card">
+            <div class="pack-icon">☀️</div>
+            <h3 class="pack-title">Summer Break Sanity</h3>
+            <p class="pack-description">Survive summer without unlimited screen time. Structure, boredom busters, camp logistics, and the back-to-school transition.</p>
+            <span class="pack-badge">6 prompts</span>
+            <div class="pack-actions">
+                <a href="summer-break.html" class="pack-btn pack-btn-preview">Preview</a>
+                <!-- REPLACE: Add Lemon Squeezy checkout button here -->
+                <span class="pack-btn pack-btn-buy">Coming Soon</span>
+            </div>
+        </div>
+
+        <!-- Pack 5: Meal Planning -->
+        <div class="pack-card">
+            <div class="pack-icon">🍽️</div>
+            <h3 class="pack-title">Meal Planning</h3>
+            <p class="pack-description">End the daily dinner dread forever. Weekly planning, grocery runs, picky eaters, 20-minute dinners, and leftover magic.</p>
+            <span class="pack-badge">6 prompts</span>
+            <div class="pack-actions">
+                <a href="meal-planning.html" class="pack-btn pack-btn-preview">Preview</a>
+                <!-- REPLACE: Add Lemon Squeezy checkout button here -->
+                <span class="pack-btn pack-btn-buy">Coming Soon</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ======================== FREE GUIDE CALLOUT ======================== -->
+<section class="free-callout reveal">
+    <div class="free-callout-inner">
+        <h2>Not sure yet? Start free.</h2>
+        <p>Get 10 AI prompts that actually help with the mental load. Free, instant access.</p>
+        <a href="/" class="free-callout-btn">Get the Free Guide</a>
+    </div>
+</section>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="site-footer">
+    <p class="footer-logo">My <em>Second Brain</em></p>
+    <p>AI-powered relief for the mental load</p>
+    <nav class="footer-nav">
+        <a href="/">Home</a>
+        <a href="/guide.html">Free Guide</a>
+        <a href="/blog/">Blog</a>
+    </nav>
+</footer>
+
+<script>
+    // ─── Nav shadow on scroll ───
+    const nav = document.querySelector('.site-nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ─── Scroll reveal ───
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+        revealObserver.observe(el);
+    });
+</script>
+
+</body>
+</html>

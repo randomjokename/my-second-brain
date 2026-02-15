@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — My Second Brain</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Practical AI tips for moms managing the mental load. Real strategies, no tech jargon.">
+    <meta name="theme-color" content="#5B7B6D">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../og-image.png">
+
+    <!-- Open Graph (Facebook, iMessage, Slack, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mysecondbrain.xyz/blog/">
+    <meta property="og:title" content="Blog — My Second Brain">
+    <meta property="og:description" content="Practical AI tips for moms managing the mental load. Real strategies, no tech jargon.">
+    <meta property="og:image" content="https://mysecondbrain.xyz/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="My Second Brain">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog — My Second Brain">
+    <meta name="twitter:description" content="Practical AI tips for moms managing the mental load. Real strategies, no tech jargon.">
+    <meta name="twitter:image" content="https://mysecondbrain.xyz/og-image.png">
+
+    <link rel="canonical" href="https://mysecondbrain.xyz/blog/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #5B7B6D;
+            --sage-light: #7A9A8C;
+            --sage-pale: #D4E2DB;
+            --sage-wash: #EEF4F1;
+            --cream: #FAF8F5;
+            --cream-dark: #F5F1EB;
+            --coral: #E8A598;
+            --coral-deep: #D4877A;
+            --charcoal: #2D3436;
+            --charcoal-light: #4A5154;
+            --gray: #636E72;
+            --gray-light: #B2BEC3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background-color: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            font-size: 18px;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .logo svg {
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+        }
+
+        .logo-wordmark {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.85rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            letter-spacing: -0.3px;
+            line-height: 1.15;
+        }
+
+        .logo-wordmark em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-light);
+            transform: translateY(-2px);
+        }
+
+        /* Blog Hero */
+        .blog-hero {
+            padding: 4rem 2rem 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            font-size: clamp(2.25rem, 5vw, 3.25rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .blog-hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Post List */
+        .post-list {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.25rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--cream-dark);
+            transition: all 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .post-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--coral-deep);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+
+        .post-card h2 {
+            font-size: 1.4rem;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+
+        .post-card h2 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .post-card h2 a:hover {
+            color: var(--sage);
+        }
+
+        .post-meta {
+            font-size: 0.88rem;
+            color: var(--gray-light);
+            margin-bottom: 1rem;
+        }
+
+        .post-excerpt {
+            font-size: 1.02rem;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .read-more {
+            font-size: 0.95rem;
+            color: var(--sage);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .read-more:hover {
+            color: var(--sage-light);
+        }
+
+        /* Email CTA Section */
+        .blog-cta {
+            background: var(--sage-wash);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .blog-cta-inner {
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .blog-cta h2 {
+            font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .blog-cta p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .blog-cta .cta-button {
+            display: inline-block;
+            background: var(--sage);
+            color: white;
+            padding: 1rem 2.25rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .blog-cta .cta-button:hover {
+            background: var(--sage-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(91, 123, 109, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--gray-light);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .footer-tagline {
+            font-size: 0.9rem;
+            color: var(--gray-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: var(--gray-light);
+            text-decoration: none;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(178, 190, 195, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: white;
+            border-bottom-color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+            }
+
+            nav {
+                padding: 1rem 1.25rem;
+            }
+
+            .logo-wordmark {
+                font-size: 1.4rem;
+            }
+
+            .logo svg {
+                width: 42px;
+                height: 42px;
+            }
+
+            .nav-cta {
+                padding: 0.6rem 1.25rem;
+                font-size: 0.9rem;
+            }
+
+            .blog-hero {
+                padding: 2.5rem 1.25rem 2rem;
+            }
+
+            .post-list {
+                padding: 1.5rem 1.25rem 3rem;
+            }
+
+            .post-card {
+                padding: 1.75rem;
+            }
+
+            .post-card h2 {
+                font-size: 1.25rem;
+            }
+
+            .blog-cta {
+                padding: 3.5rem 1.25rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .fade-in-delay-1 { animation-delay: 0.1s; }
+        .fade-in-delay-2 { animation-delay: 0.2s; }
+        .fade-in-delay-3 { animation-delay: 0.3s; }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="logo">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="26" cy="26" r="5" fill="#5B7B6D"/>
+                <circle cx="25" cy="25" r="2" fill="#7A9A8C"/>
+                <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/>
+                <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/>
+                <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/>
+                <circle cx="40" cy="18" r="2.8" fill="#E8A598"/>
+                <circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/>
+                <circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/>
+            </svg>
+            <span class="logo-wordmark">My <em>Second Brain</em></span>
+        </a>
+        <a href="/" class="nav-cta">Get the Free Guide</a>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <h1 class="fade-in">From the Second Brain</h1>
+        <p class="fade-in fade-in-delay-1">Practical AI tips for moms managing the mental load. No tech jargon, no hustle culture — just real strategies for the real stuff.</p>
+    </section>
+
+    <!-- Post List -->
+    <div class="post-list">
+
+        <!-- Post Card 1 -->
+        <article class="post-card fade-in fade-in-delay-1">
+            <span class="post-category">Meal Planning</span>
+            <h2><a href="/blog/ai-prompts-meal-planning.html">5 AI Prompts That'll Change How You Plan Meals</a></h2>
+            <p class="post-meta">January 28, 2025 &middot; 4 min read</p>
+            <p class="post-excerpt">Stop staring at the fridge at 5pm wondering what to make. These five prompts turn what you actually have into meals your family will actually eat.</p>
+            <a href="/blog/ai-prompts-meal-planning.html" class="read-more">Read more &rarr;</a>
+        </article>
+
+        <!-- Post Card 2 -->
+        <article class="post-card fade-in fade-in-delay-2">
+            <span class="post-category">Getting Started</span>
+            <h2><a href="/blog/new-to-ai-where-to-start.html">New to AI? Here's Exactly Where to Start</a></h2>
+            <p class="post-meta">January 15, 2025 &middot; 3 min read</p>
+            <p class="post-excerpt">You don't need to understand how AI works to use it. Here's a zero-jargon, five-minute guide to getting your first useful result.</p>
+            <a href="/blog/new-to-ai-where-to-start.html" class="read-more">Read more &rarr;</a>
+        </article>
+
+        <!-- Post Card 3 -->
+        <article class="post-card fade-in fade-in-delay-3">
+            <span class="post-category">Mental Load</span>
+            <h2><a href="/blog/why-just-make-a-list-doesnt-work.html">Why "Just Make a List" Doesn't Work for the Mental Load</a></h2>
+            <p class="post-meta">February 4, 2025 &middot; 5 min read</p>
+            <p class="post-excerpt">Lists capture tasks, but the mental load isn't about tasks. It's about the invisible thinking, planning, and anticipating that never makes it onto paper.</p>
+            <a href="/blog/why-just-make-a-list-doesnt-work.html" class="read-more">Read more &rarr;</a>
+        </article>
+
+    </div>
+
+    <!-- Email Capture CTA -->
+    <section class="blog-cta">
+        <div class="blog-cta-inner">
+            <h2>Want more tips?</h2>
+            <p>Get 10 free AI prompts designed for the stuff you actually deal with every day — meals, emails, kid questions, and the never-ending mental to-do list.</p>
+            <a href="/" class="cta-button">Get the Free Guide</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-logo">My <em>Second Brain</em></p>
+        <p class="footer-tagline">AI-powered relief for the mental load</p>
+        <nav class="footer-nav">
+            <a href="/">Home</a>
+            <a href="/packs/">Prompt Packs</a>
+            <a href="/guide.html">Free Guide</a>
+        </nav>
+    </footer>
+</body>
+</html>
