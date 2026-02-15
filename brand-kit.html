@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Kit — My Second Brain</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#5B7B6D">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #5B7B6D;
+            --sage-light: #7A9A8C;
+            --sage-pale: #D4E2DB;
+            --sage-wash: #EEF4F1;
+            --cream: #FAF8F5;
+            --cream-dark: #F5F1EB;
+            --coral: #E8A598;
+            --coral-deep: #D4877A;
+            --charcoal: #2D3436;
+            --charcoal-light: #4A5154;
+            --gray: #636E72;
+            --gray-light: #B2BEC3;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Header ── */
+        .kit-header {
+            background: var(--charcoal);
+            color: white;
+            padding: 3rem 2rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kit-header::before {
+            content: '';
+            position: absolute;
+            top: -120px; right: -80px;
+            width: 400px; height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(91,123,109,0.25) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .kit-header::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: -40px;
+            width: 250px; height: 250px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(232,165,152,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .kit-header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .kit-header .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--sage-pale);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .kit-header h1 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            line-height: 1.15;
+        }
+
+        .kit-header h1 em {
+            font-style: italic;
+            color: var(--coral);
+        }
+
+        .kit-header p {
+            color: var(--gray-light);
+            font-size: 0.95rem;
+            max-width: 480px;
+        }
+
+        /* ── Navigation ── */
+        .kit-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(250,248,245,0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--cream-dark);
+            padding: 0 2rem;
+        }
+
+        .kit-nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .kit-nav-inner::-webkit-scrollbar { display: none; }
+
+        .kit-nav a {
+            padding: 0.85rem 1.25rem;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--gray);
+            text-decoration: none;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .kit-nav a:hover {
+            color: var(--sage);
+            border-bottom-color: var(--sage-pale);
+        }
+
+        .kit-nav a.active {
+            color: var(--sage);
+            border-bottom-color: var(--sage);
+        }
+
+        /* ── Sections ── */
+        .kit-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            scroll-margin-top: 60px;
+        }
+
+        .kit-section + .kit-section {
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--coral-deep);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-desc {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+            max-width: 560px;
+        }
+
+        /* ── Profile Pictures ── */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid var(--cream-dark);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .profile-card:hover {
+            box-shadow: 0 8px 32px rgba(45,52,54,0.06);
+        }
+
+        .profile-preview {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            min-height: 180px;
+        }
+
+        .profile-preview canvas {
+            border-radius: 12px;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 2px 12px rgba(45,52,54,0.06);
+        }
+
+        .profile-info {
+            padding: 1rem 1.25rem 1.25rem;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .profile-info .size-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 2px;
+        }
+
+        .profile-info .size-use {
+            font-size: 0.75rem;
+            color: var(--gray-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: var(--sage);
+            color: white;
+            border: none;
+            border-radius: 100px;
+            font-family: inherit;
+            font-size: 0.78rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background: var(--sage-light);
+            transform: translateY(-1px);
+        }
+
+        .download-btn svg {
+            width: 13px; height: 13px;
+        }
+
+        /* ── Banner Section ── */
+        .banner-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .banner-card {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid var(--cream-dark);
+            overflow: hidden;
+        }
+
+        .banner-preview {
+            padding: 1.5rem;
+            background: var(--sage-wash);
+            display: flex;
+            justify-content: center;
+        }
+
+        .banner-preview canvas {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(45,52,54,0.06);
+        }
+
+        .banner-info {
+            padding: 1rem 1.5rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .banner-meta .size-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .banner-meta .size-use {
+            font-size: 0.75rem;
+            color: var(--gray-light);
+        }
+
+        /* ── Colors ── */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+            gap: 12px;
+        }
+
+        .color-card {
+            background: white;
+            border-radius: 14px;
+            border: 1px solid var(--cream-dark);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .color-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(45,52,54,0.08);
+        }
+
+        .color-swatch {
+            height: 80px;
+            transition: transform 0.3s ease;
+        }
+
+        .color-card:hover .color-swatch {
+            transform: scale(1.02);
+        }
+
+        .color-meta {
+            padding: 10px 14px 12px;
+        }
+
+        .color-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 2px;
+        }
+
+        .color-hex {
+            font-size: 0.75rem;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            color: var(--gray);
+        }
+
+        .color-copied {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--charcoal);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+        }
+
+        .color-card.copied .color-copied {
+            opacity: 1;
+        }
+
+        /* ── Typography ── */
+        .type-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .type-card {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid var(--cream-dark);
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .type-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--sage);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .type-font-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 2px;
+        }
+
+        .type-weights {
+            font-size: 0.78rem;
+            color: var(--gray-light);
+        }
+
+        .type-sample {
+            color: var(--charcoal);
+            line-height: 1.4;
+        }
+
+        .type-sample-large {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .type-sample-body {
+            font-size: 1rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* ── Logo Variations ── */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .logo-card {
+            border-radius: 16px;
+            border: 1px solid var(--cream-dark);
+            overflow: hidden;
+        }
+
+        .logo-preview {
+            padding: 3rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+
+        .logo-preview.light-bg {
+            background: white;
+        }
+
+        .logo-preview.dark-bg {
+            background: var(--charcoal);
+        }
+
+        .logo-preview.cream-bg {
+            background: var(--cream);
+        }
+
+        .logo-preview.sage-bg {
+            background: var(--sage);
+        }
+
+        .logo-preview svg {
+            flex-shrink: 0;
+        }
+
+        .logo-preview .logo-wordmark-display {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-preview .logo-stacked {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-preview .wordmark-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            letter-spacing: -0.3px;
+        }
+
+        .logo-preview .wordmark-text em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .logo-preview.dark-bg .wordmark-text {
+            color: white;
+        }
+
+        .logo-preview.sage-bg .wordmark-text {
+            color: white;
+        }
+
+        .logo-actions {
+            padding: 0.85rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--cream-dark);
+            background: white;
+        }
+
+        .logo-actions .logo-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .copy-svg-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            background: var(--sage-wash);
+            color: var(--sage);
+            border: 1px solid var(--sage-pale);
+            border-radius: 100px;
+            font-family: inherit;
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .copy-svg-btn:hover {
+            background: var(--sage-pale);
+        }
+
+        .copy-svg-btn.copied {
+            background: var(--sage);
+            color: white;
+            border-color: var(--sage);
+        }
+
+        .copy-svg-btn svg {
+            width: 12px; height: 12px;
+        }
+
+        /* ── Toast ── */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: var(--charcoal);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 100;
+            box-shadow: 0 8px 32px rgba(45,52,54,0.2);
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .kit-section { padding: 3rem 1.25rem; }
+            .type-card { grid-template-columns: 1fr; gap: 1rem; }
+            .logo-grid { grid-template-columns: 1fr; }
+            .profile-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+            .banner-info { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+        }
+
+        @media (max-width: 480px) {
+            .kit-header { padding: 2rem 1.25rem; }
+            .kit-header h1 { font-size: 1.75rem; }
+            .color-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="kit-header">
+    <div class="kit-header-inner">
+        <p class="label">Internal Tool</p>
+        <h1>Brand <em>Kit</em></h1>
+        <p>Assets, colors, and typography for My Second Brain social accounts and marketing materials.</p>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav class="kit-nav">
+    <div class="kit-nav-inner">
+        <a href="#profiles" class="active">Profile Pictures</a>
+        <a href="#banners">Banners</a>
+        <a href="#colors">Colors</a>
+        <a href="#typography">Typography</a>
+        <a href="#logos">Logo Variations</a>
+    </div>
+</nav>
+
+<!-- ═══════════════════════ PROFILE PICTURES ═══════════════════════ -->
+<section class="kit-section" id="profiles">
+    <p class="section-label">01</p>
+    <h2 class="section-title">Profile Pictures</h2>
+    <p class="section-desc">Ready-to-download profile images for every platform. Click to download as PNG.</p>
+    <div class="profile-grid" id="profileGrid"></div>
+</section>
+
+<!-- ═══════════════════════ BANNERS ═══════════════════════ -->
+<section class="kit-section" id="banners">
+    <p class="section-label">02</p>
+    <h2 class="section-title">Cover Banners</h2>
+    <p class="section-desc">Header and cover images sized for each platform.</p>
+    <div class="banner-grid" id="bannerGrid"></div>
+</section>
+
+<!-- ═══════════════════════ COLORS ═══════════════════════ -->
+<section class="kit-section" id="colors">
+    <p class="section-label">03</p>
+    <h2 class="section-title">Color Palette</h2>
+    <p class="section-desc">Click any swatch to copy its hex code.</p>
+    <div class="color-grid" id="colorGrid"></div>
+</section>
+
+<!-- ═══════════════════════ TYPOGRAPHY ═══════════════════════ -->
+<section class="kit-section" id="typography">
+    <p class="section-label">04</p>
+    <h2 class="section-title">Typography</h2>
+    <p class="section-desc">The three typefaces that form the brand's voice.</p>
+    <div class="type-stack">
+        <div class="type-card">
+            <div>
+                <p class="type-label">Headings</p>
+                <p class="type-font-name">Fraunces</p>
+                <p class="type-weights">300 / 400 / 500 / 600 / 700</p>
+            </div>
+            <div class="type-sample">
+                <p class="type-sample-large" style="font-family: 'Fraunces', serif; font-weight: 500;">Finally, a way to get your brain back</p>
+                <p class="type-sample-body" style="font-family: 'Fraunces', serif; font-weight: 400; font-style: italic;">AI-powered relief for the mental load</p>
+            </div>
+        </div>
+        <div class="type-card">
+            <div>
+                <p class="type-label">Logo Wordmark</p>
+                <p class="type-font-name">Playfair Display</p>
+                <p class="type-weights">400 / 500 / 600 / italic</p>
+            </div>
+            <div class="type-sample">
+                <p class="type-sample-large" style="font-family: 'Playfair Display', serif; font-weight: 400;">My <em style="font-weight:500;">Second Brain</em></p>
+                <p class="type-sample-body" style="font-family: 'Playfair Display', serif; font-weight: 400;">The wordmark uses regular weight for "My" and italic 500 for "Second Brain"</p>
+            </div>
+        </div>
+        <div class="type-card">
+            <div>
+                <p class="type-label">Body Text</p>
+                <p class="type-font-name">Source Sans 3</p>
+                <p class="type-weights">300 / 400 / 500 / 600</p>
+            </div>
+            <div class="type-sample">
+                <p class="type-sample-large" style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">Real solutions for the real stuff.</p>
+                <p class="type-sample-body" style="font-family: 'Source Sans 3', sans-serif; font-weight: 300;">10 AI prompts that actually help with the mental load. Meal planning, teacher emails, kid questions, boundary scripts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ LOGO VARIATIONS ═══════════════════════ -->
+<section class="kit-section" id="logos">
+    <p class="section-label">05</p>
+    <h2 class="section-title">Logo Variations</h2>
+    <p class="section-desc">Different configurations for different contexts. Copy the SVG code directly.</p>
+    <div class="logo-grid">
+        <!-- Icon Only - Light -->
+        <div class="logo-card">
+            <div class="logo-preview light-bg">
+                <svg viewBox="0 0 52 52" fill="none" width="80" height="80"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+            </div>
+            <div class="logo-actions">
+                <span class="logo-label">Icon Only</span>
+                <button class="copy-svg-btn" data-svg="icon-only" onclick="copySVG(this, 'icon')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    Copy SVG
+                </button>
+            </div>
+        </div>
+
+        <!-- Icon Only - Dark -->
+        <div class="logo-card">
+            <div class="logo-preview dark-bg">
+                <svg viewBox="0 0 52 52" fill="none" width="80" height="80"><circle cx="26" cy="26" r="5" fill="#7A9A8C"/><circle cx="25" cy="25" r="2" fill="#D4E2DB"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.7"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.5"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#EEF4F1" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.3"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.65"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.5"/></svg>
+            </div>
+            <div class="logo-actions">
+                <span class="logo-label">Icon — Dark BG</span>
+                <button class="copy-svg-btn" onclick="copySVG(this, 'icon-dark')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    Copy SVG
+                </button>
+            </div>
+        </div>
+
+        <!-- Horizontal Lockup -->
+        <div class="logo-card">
+            <div class="logo-preview cream-bg">
+                <div class="logo-wordmark-display">
+                    <svg viewBox="0 0 52 52" fill="none" width="52" height="52"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+                    <span class="wordmark-text">My <em>Second Brain</em></span>
+                </div>
+            </div>
+            <div class="logo-actions">
+                <span class="logo-label">Horizontal Lockup</span>
+                <button class="copy-svg-btn" onclick="copySVG(this, 'horizontal')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    Copy SVG
+                </button>
+            </div>
+        </div>
+
+        <!-- Stacked Lockup -->
+        <div class="logo-card">
+            <div class="logo-preview sage-bg">
+                <div class="logo-stacked">
+                    <svg viewBox="0 0 52 52" fill="none" width="56" height="56"><circle cx="26" cy="26" r="5" fill="#D4E2DB"/><circle cx="25" cy="25" r="2" fill="#EEF4F1"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.7"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#EEF4F1" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.5"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="white" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.3"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.65"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.5"/></svg>
+                    <span class="wordmark-text" style="font-size:1.3rem;">My <em>Second Brain</em></span>
+                </div>
+            </div>
+            <div class="logo-actions">
+                <span class="logo-label">Stacked — Sage BG</span>
+                <button class="copy-svg-btn" onclick="copySVG(this, 'stacked')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    Copy SVG
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ────────────────────────────────────────────────────────
+//  SHARED
+// ────────────────────────────────────────────────────────
+const SAGE = '#5B7B6D';
+const SAGE_LIGHT = '#7A9A8C';
+const SAGE_PALE = '#D4E2DB';
+const SAGE_WASH = '#EEF4F1';
+const CREAM = '#FAF8F5';
+const CORAL = '#E8A598';
+const CORAL_DEEP = '#D4877A';
+const CHARCOAL = '#2D3436';
+
+function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+function downloadCanvas(canvas, filename) {
+    canvas.toBlob(blob => {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = filename;
+        a.click();
+        URL.revokeObjectURL(a.href);
+        showToast('Downloaded ' + filename);
+    }, 'image/png');
+}
+
+// ────────────────────────────────────────────────────────
+//  DRAW ORBIT LOGO onto canvas at a given size & offset
+// ────────────────────────────────────────────────────────
+function drawOrbitLogo(ctx, cx, cy, scale, variant) {
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.scale(scale, scale);
+    // translate so 0,0 is center of viewBox
+    ctx.translate(-26, -26);
+
+    const isDark = variant === 'dark';
+    const coreFill = isDark ? SAGE_LIGHT : SAGE;
+    const innerFill = isDark ? SAGE_PALE : SAGE_LIGHT;
+
+    // Core
+    ctx.beginPath(); ctx.arc(26, 26, 5, 0, Math.PI * 2);
+    ctx.fillStyle = coreFill; ctx.fill();
+
+    ctx.beginPath(); ctx.arc(25, 25, 2, 0, Math.PI * 2);
+    ctx.fillStyle = innerFill; ctx.fill();
+
+    // Orbits
+    function drawEllipse(rot, opacity, color, sw) {
+        ctx.save();
+        ctx.translate(26, 26);
+        ctx.rotate(rot * Math.PI / 180);
+        ctx.beginPath();
+        ctx.ellipse(0, 0, 18, 8, 0, 0, Math.PI * 2);
+        ctx.strokeStyle = color;
+        ctx.lineWidth = sw;
+        ctx.globalAlpha = opacity;
+        ctx.stroke();
+        ctx.restore();
+    }
+
+    const o1c = isDark ? SAGE_LIGHT : SAGE;
+    const o2c = isDark ? SAGE_PALE : SAGE_LIGHT;
+    const o3c = isDark ? SAGE_WASH : SAGE_PALE;
+    drawEllipse(-20, isDark ? 0.7 : 0.6, o1c, 1.4);
+    drawEllipse(40, isDark ? 0.5 : 0.45, o2c, 1.4);
+    drawEllipse(-70, isDark ? 0.3 : 0.35, o3c, 1.3);
+
+    ctx.globalAlpha = 1;
+
+    // Coral dots
+    ctx.beginPath(); ctx.arc(40, 18, 2.8, 0, Math.PI * 2);
+    ctx.fillStyle = CORAL; ctx.fill();
+
+    ctx.beginPath(); ctx.arc(13, 21, 2, 0, Math.PI * 2);
+    ctx.fillStyle = CORAL; ctx.globalAlpha = isDark ? 0.65 : 0.55; ctx.fill();
+
+    ctx.beginPath(); ctx.arc(33, 39, 1.6, 0, Math.PI * 2);
+    ctx.fillStyle = CORAL; ctx.globalAlpha = isDark ? 0.5 : 0.4; ctx.fill();
+
+    ctx.globalAlpha = 1;
+    ctx.restore();
+}
+
+// ────────────────────────────────────────────────────────
+//  PROFILE PICTURES
+// ────────────────────────────────────────────────────────
+const profileConfigs = [
+    { w: 400, h: 400, label: '400 × 400', use: 'General use', bg: CREAM, bgName: 'cream' },
+    { w: 400, h: 400, label: '400 × 400', use: 'General use', bg: '#FFFFFF', bgName: 'white' },
+    { w: 320, h: 320, label: '320 × 320', use: 'Instagram / TikTok', bg: CREAM, bgName: 'cream' },
+    { w: 320, h: 320, label: '320 × 320', use: 'Instagram / TikTok', bg: '#FFFFFF', bgName: 'white' },
+    { w: 180, h: 180, label: '180 × 180', use: 'Facebook', bg: CREAM, bgName: 'cream' },
+    { w: 170, h: 170, label: '170 × 170', use: 'X / Twitter', bg: CREAM, bgName: 'cream' },
+];
+
+function buildProfiles() {
+    const grid = document.getElementById('profileGrid');
+    profileConfigs.forEach(cfg => {
+        const card = document.createElement('div');
+        card.className = 'profile-card';
+
+        const canvas = document.createElement('canvas');
+        canvas.width = cfg.w;
+        canvas.height = cfg.h;
+        const displaySize = Math.min(cfg.w, 160);
+        canvas.style.width = displaySize + 'px';
+        canvas.style.height = displaySize + 'px';
+
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = cfg.bg;
+        ctx.fillRect(0, 0, cfg.w, cfg.h);
+
+        const logoScale = cfg.w / 52 * 0.55;
+        drawOrbitLogo(ctx, cfg.w / 2, cfg.h / 2, logoScale);
+
+        const fname = `msb-profile-${cfg.w}x${cfg.h}-${cfg.bgName}.png`;
+
+        card.innerHTML = `
+            <div class="profile-preview" style="background:${cfg.bg === '#FFFFFF' ? '#f8f8f8' : SAGE_WASH}"></div>
+            <div class="profile-info">
+                <p class="size-label">${cfg.label} — ${cfg.bgName}</p>
+                <p class="size-use">${cfg.use}</p>
+            </div>
+        `;
+        card.querySelector('.profile-preview').appendChild(canvas);
+
+        const btn = document.createElement('button');
+        btn.className = 'download-btn';
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download PNG';
+        btn.addEventListener('click', () => downloadCanvas(canvas, fname));
+        card.querySelector('.profile-info').appendChild(btn);
+
+        grid.appendChild(card);
+    });
+}
+
+// ────────────────────────────────────────────────────────
+//  BANNERS
+// ────────────────────────────────────────────────────────
+const bannerConfigs = [
+    { w: 1500, h: 500, label: '1500 × 500', use: 'X / Twitter Header' },
+    { w: 820, h: 312, label: '820 × 312', use: 'Facebook Cover' },
+    { w: 1584, h: 396, label: '1584 × 396', use: 'LinkedIn Banner' },
+];
+
+function drawBanner(canvas) {
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width;
+    const h = canvas.height;
+    const s = Math.min(w, h);
+
+    // Clean cream background
+    ctx.fillStyle = CREAM;
+    ctx.fillRect(0, 0, w, h);
+
+    // Thin accent stripe along top edge
+    const stripeH = Math.round(h * 0.014);
+    const stripeGrd = ctx.createLinearGradient(0, 0, w, 0);
+    stripeGrd.addColorStop(0, SAGE);
+    stripeGrd.addColorStop(0.4, SAGE_LIGHT);
+    stripeGrd.addColorStop(0.7, CORAL);
+    stripeGrd.addColorStop(1, CORAL_DEEP);
+    ctx.fillStyle = stripeGrd;
+    ctx.fillRect(0, 0, w, stripeH);
+
+    // Subtle bottom border
+    ctx.fillStyle = SAGE_PALE;
+    ctx.fillRect(0, h - 1, w, 1);
+
+    // ── Horizontal lockup: icon + "My Second Brain" on one line ──
+    const fontSize1 = Math.round(s * 0.11);
+    const fontSize2 = Math.round(s * 0.048);
+    const logoIconSize = Math.round(s * 0.32);
+    const logoScale = logoIconSize / 52;
+    const iconTextGap = Math.round(s * 0.06);
+
+    // Measure wordmark to calculate total lockup width
+    ctx.font = `400 ${fontSize1}px Fraunces, Georgia, serif`;
+    const myW = ctx.measureText('My ').width;
+    ctx.font = `italic 500 ${fontSize1}px Fraunces, Georgia, serif`;
+    const sbW = ctx.measureText('Second Brain').width;
+    const wordmarkW = myW + sbW;
+    const lockupW = logoIconSize + iconTextGap + wordmarkW;
+
+    // Center the lockup horizontally, shift up a touch for tagline below
+    const lockupX = (w - lockupW) / 2;
+    const lockupY = h * 0.42;
+
+    // Draw orbit icon — vertically centered with text
+    drawOrbitLogo(ctx, lockupX + logoIconSize / 2, lockupY, logoScale);
+
+    // Draw wordmark — aligned to icon's vertical center
+    const textX = lockupX + logoIconSize + iconTextGap;
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'middle';
+
+    ctx.font = `400 ${fontSize1}px Fraunces, Georgia, serif`;
+    ctx.fillStyle = CHARCOAL;
+    ctx.fillText('My ', textX, lockupY);
+
+    ctx.font = `italic 500 ${fontSize1}px Fraunces, Georgia, serif`;
+    ctx.fillText('Second Brain', textX + myW, lockupY);
+
+    // Tagline centered below the lockup
+    ctx.font = `300 ${fontSize2}px "Source Sans 3", sans-serif`;
+    ctx.fillStyle = '#636E72';
+    ctx.textAlign = 'center';
+    ctx.fillText('AI-powered relief for the mental load', w / 2, lockupY + fontSize1 * 1.15);
+}
+
+function buildBanners() {
+    const grid = document.getElementById('bannerGrid');
+    bannerConfigs.forEach(cfg => {
+        const card = document.createElement('div');
+        card.className = 'banner-card';
+
+        const canvas = document.createElement('canvas');
+        canvas.width = cfg.w;
+        canvas.height = cfg.h;
+        canvas.style.maxWidth = '100%';
+        canvas.style.height = 'auto';
+
+        const fname = `msb-banner-${cfg.w}x${cfg.h}.png`;
+
+        card.innerHTML = `
+            <div class="banner-preview"></div>
+            <div class="banner-info">
+                <div class="banner-meta">
+                    <p class="size-label">${cfg.label}</p>
+                    <p class="size-use">${cfg.use}</p>
+                </div>
+            </div>
+        `;
+        card.querySelector('.banner-preview').appendChild(canvas);
+
+        const btn = document.createElement('button');
+        btn.className = 'download-btn';
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download PNG';
+        btn.addEventListener('click', () => downloadCanvas(canvas, fname));
+        card.querySelector('.banner-info').appendChild(btn);
+
+        grid.appendChild(card);
+    });
+}
+
+function renderBanners() {
+    document.querySelectorAll('#bannerGrid canvas').forEach(c => drawBanner(c));
+}
+
+// ────────────────────────────────────────────────────────
+//  COLORS
+// ────────────────────────────────────────────────────────
+const brandColors = [
+    { name: 'Sage', hex: '#5B7B6D' },
+    { name: 'Sage Light', hex: '#7A9A8C' },
+    { name: 'Sage Pale', hex: '#D4E2DB' },
+    { name: 'Sage Wash', hex: '#EEF4F1' },
+    { name: 'Cream', hex: '#FAF8F5' },
+    { name: 'Cream Dark', hex: '#F5F1EB' },
+    { name: 'Coral', hex: '#E8A598' },
+    { name: 'Coral Deep', hex: '#D4877A' },
+    { name: 'Charcoal', hex: '#2D3436' },
+    { name: 'Gray', hex: '#636E72' },
+];
+
+function buildColors() {
+    const grid = document.getElementById('colorGrid');
+    brandColors.forEach(c => {
+        const card = document.createElement('div');
+        card.className = 'color-card';
+        card.innerHTML = `
+            <div class="color-swatch" style="background:${c.hex}"></div>
+            <div class="color-meta">
+                <p class="color-name">${c.name}</p>
+                <p class="color-hex">${c.hex}</p>
+            </div>
+            <span class="color-copied">Copied!</span>
+        `;
+        card.addEventListener('click', () => {
+            navigator.clipboard.writeText(c.hex);
+            card.classList.add('copied');
+            showToast(`Copied ${c.hex}`);
+            setTimeout(() => card.classList.remove('copied'), 1200);
+        });
+        grid.appendChild(card);
+    });
+}
+
+// ────────────────────────────────────────────────────────
+//  LOGO SVG COPY
+// ────────────────────────────────────────────────────────
+const SVG_STRINGS = {
+    icon: `<svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">\n  <circle cx="26" cy="26" r="5" fill="#5B7B6D"/>\n  <circle cx="25" cy="25" r="2" fill="#7A9A8C"/>\n  <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/>\n  <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/>\n  <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/>\n  <circle cx="40" cy="18" r="2.8" fill="#E8A598"/>\n  <circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/>\n  <circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/>\n</svg>`,
+
+    'icon-dark': `<svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">\n  <circle cx="26" cy="26" r="5" fill="#7A9A8C"/>\n  <circle cx="25" cy="25" r="2" fill="#D4E2DB"/>\n  <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.7"/>\n  <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.5"/>\n  <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#EEF4F1" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.3"/>\n  <circle cx="40" cy="18" r="2.8" fill="#E8A598"/>\n  <circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.65"/>\n  <circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.5"/>\n</svg>`,
+
+    horizontal: `<!-- Horizontal Logo Lockup (use with CSS for wordmark) -->\n<a href="/" class="logo">\n  <svg viewBox="0 0 52 52" fill="none" width="44" height="44">\n    <circle cx="26" cy="26" r="5" fill="#5B7B6D"/>\n    <circle cx="25" cy="25" r="2" fill="#7A9A8C"/>\n    <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/>\n    <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/>\n    <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/>\n    <circle cx="40" cy="18" r="2.8" fill="#E8A598"/>\n    <circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/>\n    <circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/>\n  </svg>\n  <span style="font-family:'Playfair Display',serif; font-size:1.5rem; color:#2D3436;">My <em style="font-style:italic; font-weight:500;">Second Brain</em></span>\n</a>`,
+
+    stacked: `<!-- Stacked Logo Lockup -->\n<div style="display:flex; flex-direction:column; align-items:center; gap:12px;">\n  <svg viewBox="0 0 52 52" fill="none" width="56" height="56">\n    <circle cx="26" cy="26" r="5" fill="#5B7B6D"/>\n    <circle cx="25" cy="25" r="2" fill="#7A9A8C"/>\n    <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/>\n    <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/>\n    <ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/>\n    <circle cx="40" cy="18" r="2.8" fill="#E8A598"/>\n    <circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/>\n    <circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/>\n  </svg>\n  <span style="font-family:'Playfair Display',serif; font-size:1.3rem; color:#2D3436;">My <em style="font-style:italic; font-weight:500;">Second Brain</em></span>\n</div>`,
+};
+
+function copySVG(btn, key) {
+    navigator.clipboard.writeText(SVG_STRINGS[key]);
+    btn.classList.add('copied');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+    showToast('SVG copied to clipboard');
+    setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy SVG';
+    }, 2000);
+}
+
+// ────────────────────────────────────────────────────────
+//  NAV SCROLL HIGHLIGHT
+// ────────────────────────────────────────────────────────
+function initNav() {
+    const links = document.querySelectorAll('.kit-nav a');
+    const sections = document.querySelectorAll('.kit-section');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                links.forEach(l => l.classList.remove('active'));
+                const target = document.querySelector(`.kit-nav a[href="#${e.target.id}"]`);
+                if (target) target.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    sections.forEach(s => obs.observe(s));
+}
+
+// ────────────────────────────────────────────────────────
+//  INIT — wait for fonts to load before drawing canvases
+// ────────────────────────────────────────────────────────
+buildProfiles();
+buildColors();
+buildBanners();
+initNav();
+
+document.fonts.ready.then(() => {
+    renderBanners();
+});
+</script>
+
+</body>
+</html>

@@ -2,14 +2,15 @@
 User-agent: *
 Allow: /
 
-# Paid content (noindex already set, but belt & suspenders)
-Disallow: /packs/back-to-school.html
-Disallow: /packs/holiday-survival.html
-Disallow: /packs/newborn-fog.html
-Disallow: /packs/summer-break.html
-Disallow: /packs/meal-planning.html
+# Paid content (secret link folders — noindex already set, but belt & suspenders)
+Disallow: /packs/76606666649/
+Disallow: /packs/74700794661/
+Disallow: /packs/44729906597/
+Disallow: /packs/71711686174/
+Disallow: /packs/62239642958/
 
 # Utility pages
+Disallow: /brand-kit.html
 Disallow: /lead-magnet.html
 Disallow: /og-image.html
 Disallow: /logo-concepts.html
