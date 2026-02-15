@@ -11,7 +11,7 @@ Disallow: /packs/62239642958/
 
 # Utility pages
 Disallow: /brand-kit.html
-Disallow: /lead-magnet.html
+Disallow: /intro-pack.html
 Disallow: /og-image.html
 Disallow: /logo-concepts.html
 Disallow: /logo-fonts.html
