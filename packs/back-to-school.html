@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         PROMPT PACK TEMPLATE — My Second Brain
+
+         To create a new pack:
+         1. Duplicate this file
+         2. Update the <title> and meta tags
+         3. Replace hero content (title, subtitle, prompt count)
+         4. Replace prompt sections (copy the prompt-section blocks)
+         5. Update the TOC links to match
+         6. Update closing section upsells
+         ═══════════════════════════════════════════════════════════ -->
+
+    <!-- EDIT: Pack title -->
+    <title>Back to School Survival Pack — My Second Brain</title>
+
+    <!-- No indexing — paid content -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="description" content="15 AI prompts to get through September without losing your mind. A premium prompt pack from My Second Brain.">
+    <meta name="theme-color" content="#5B7B6D">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sage: #5B7B6D;
+            --sage-light: #7A9A8C;
+            --sage-pale: #D4E2DB;
+            --sage-wash: #EEF4F1;
+            --cream: #FAF8F5;
+            --cream-dark: #F5F1EB;
+            --coral: #E8A598;
+            --coral-deep: #D4877A;
+            --charcoal: #2D3436;
+            --charcoal-light: #4A5154;
+            --gray: #636E72;
+            --gray-light: #B2BEC3;
+            --toc-width: 260px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            font-size: 18px;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  PREMIUM TOP BAR                            */
+        /* ═══════════════════════════════════════════ */
+        .premium-bar {
+            height: 4px;
+            background: linear-gradient(90deg, var(--sage), var(--sage-light), var(--coral), var(--coral-deep));
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 110;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  NAVIGATION                                 */
+        /* ═══════════════════════════════════════════ */
+        .guide-nav {
+            position: sticky;
+            top: 4px;
+            z-index: 100;
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 226, 219, 0.5);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .guide-nav.scrolled {
+            box-shadow: 0 2px 20px rgba(45, 52, 54, 0.06);
+        }
+
+        .guide-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo svg { width: 44px; height: 44px; flex-shrink: 0; }
+
+        .logo-wordmark {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            letter-spacing: -0.3px;
+            line-height: 1.15;
+        }
+
+        .logo-wordmark em { font-style: italic; font-weight: 500; }
+
+        .pack-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            background: linear-gradient(135deg, var(--sage-wash), var(--cream-dark));
+            border: 1px solid var(--sage-pale);
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--sage);
+        }
+
+        .pack-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--coral);
+            border-radius: 50%;
+        }
+
+        .nav-cta {
+            background: var(--sage);
+            color: white;
+            padding: 0.65rem 1.35rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage-light);
+            transform: translateY(-1px);
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  LAYOUT                                     */
+        /* ═══════════════════════════════════════════ */
+        .guide-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0;
+            position: relative;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  SIDEBAR TOC                                */
+        /* ═══════════════════════════════════════════ */
+        .toc-sidebar {
+            width: var(--toc-width);
+            flex-shrink: 0;
+            display: none;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 94px;
+            padding: 2rem 0 2rem 2rem;
+            max-height: calc(100vh - 104px);
+            overflow-y: auto;
+        }
+
+        .toc-sticky::-webkit-scrollbar { width: 3px; }
+        .toc-sticky::-webkit-scrollbar-thumb { background: var(--sage-pale); border-radius: 3px; }
+
+        .toc-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--gray-light);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            color: var(--gray);
+            font-weight: 400;
+            transition: all 0.2s ease;
+            line-height: 1.35;
+        }
+
+        .toc-list a:hover { background: var(--sage-wash); color: var(--sage); }
+        .toc-list a.active { background: var(--sage-wash); color: var(--sage); font-weight: 600; }
+
+        .toc-emoji { font-size: 0.95rem; flex-shrink: 0; width: 22px; text-align: center; }
+
+        /* ═══════════════════════════════════════════ */
+        /*  MOBILE TOC                                 */
+        /* ═══════════════════════════════════════════ */
+        .toc-fab {
+            display: none;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 90;
+            width: 54px;
+            height: 54px;
+            background: var(--sage);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(91, 123, 109, 0.35);
+            transition: all 0.3s ease;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .toc-fab:hover { transform: scale(1.08); }
+
+        .toc-fab-panel {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 16px;
+            left: 16px;
+            z-index: 89;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(45, 52, 54, 0.15);
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .toc-fab-panel.open { display: block; }
+        .toc-fab-overlay { display: none; position: fixed; inset: 0; background: rgba(45, 52, 54, 0.3); z-index: 88; }
+        .toc-fab-overlay.open { display: block; }
+        .toc-fab-panel .toc-list a { padding: 10px 12px; font-size: 0.95rem; }
+
+        /* ═══════════════════════════════════════════ */
+        /*  MAIN CONTENT                               */
+        /* ═══════════════════════════════════════════ */
+        .guide-main {
+            flex: 1;
+            min-width: 0;
+            padding: 0 2rem;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  WELCOME BANNER                             */
+        /* ═══════════════════════════════════════════ */
+        .welcome-banner {
+            max-width: 720px;
+            margin: 2rem auto 0;
+            background: white;
+            border: 1px solid var(--sage-pale);
+            border-radius: 14px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--sage);
+        }
+
+        .welcome-banner svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+        /* ═══════════════════════════════════════════ */
+        /*  HERO                                       */
+        /* ═══════════════════════════════════════════ */
+        .guide-hero {
+            padding: 4rem 0 3.5rem;
+            position: relative;
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .guide-hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -200px;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--sage-pale) 0%, transparent 70%);
+            opacity: 0.45;
+            pointer-events: none;
+        }
+
+        .guide-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: -180px;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--coral) 0%, transparent 70%);
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, var(--sage-wash), white);
+            border: 1px solid var(--sage-pale);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--sage);
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: var(--coral);
+            border-radius: 50%;
+        }
+
+        .hero-orbit {
+            display: block;
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 1.5rem;
+            opacity: 0.55;
+        }
+
+        .guide-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .guide-hero h1 em {
+            font-style: italic;
+            color: var(--sage);
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--gray);
+            font-weight: 300;
+            line-height: 1.7;
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
+        .hero-note {
+            font-size: 0.88rem;
+            color: var(--sage-light);
+            font-weight: 400;
+            position: relative;
+        }
+
+        .hero-divider {
+            width: 48px;
+            height: 2px;
+            background: var(--coral);
+            margin: 2rem auto 0;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  HOW TO USE                                 */
+        /* ═══════════════════════════════════════════ */
+        .howto-section {
+            max-width: 680px;
+            margin: 0 auto 4rem;
+            padding: 3rem 0;
+        }
+
+        .howto-section h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+
+        .howto-intro {
+            color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+        }
+
+        .howto-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .howto-step { display: flex; gap: 1.25rem; align-items: flex-start; }
+
+        .howto-step-num {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--sage-pale);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 36px;
+            margin-top: 2px;
+        }
+
+        .howto-step-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--charcoal); margin-bottom: 4px; }
+        .howto-step-content p { font-size: 0.98rem; color: var(--gray); line-height: 1.65; font-weight: 300; }
+
+        .howto-closing {
+            background: var(--sage-wash);
+            border-left: 3px solid var(--sage-pale);
+            border-radius: 0 12px 12px 0;
+            padding: 1.25rem 1.5rem;
+            font-size: 0.98rem;
+            color: var(--sage);
+            line-height: 1.65;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  PROMPTS OVERVIEW                           */
+        /* ═══════════════════════════════════════════ */
+        .prompts-overview {
+            max-width: 720px;
+            margin: 0 auto 5rem;
+            padding: 3rem 0 0;
+            border-top: 1px solid var(--sage-pale);
+        }
+
+        .prompts-overview h2 { font-size: 1.6rem; margin-bottom: 0.5rem; text-align: center; }
+        .prompts-overview-sub { text-align: center; color: var(--gray); font-weight: 300; margin-bottom: 2.5rem; }
+
+        .prompts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .prompts-grid a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 0.92rem;
+            font-weight: 400;
+            background: var(--cream-dark);
+            border: 1px solid var(--cream-dark);
+            transition: all 0.25s ease;
+        }
+
+        .prompts-grid a:hover {
+            border-color: var(--sage-pale);
+            background: white;
+            box-shadow: 0 4px 16px rgba(91, 123, 109, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .prompts-grid .grid-emoji { font-size: 1.2rem; flex-shrink: 0; }
+        .prompts-grid .grid-num { font-size: 0.72rem; color: var(--gray-light); font-weight: 600; letter-spacing: 0.5px; }
+
+        /* ═══════════════════════════════════════════ */
+        /*  PROMPT SECTIONS                            */
+        /* ═══════════════════════════════════════════ */
+        .prompt-section {
+            max-width: 720px;
+            margin: 0 auto 5rem;
+            scroll-margin-top: 110px;
+        }
+
+        .prompt-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.25rem;
+        }
+
+        .prompt-number {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--coral-deep);
+        }
+
+        .prompt-number-line { flex: 1; height: 1px; background: var(--cream-dark); }
+
+        .prompt-emoji { font-size: 2.5rem; margin-bottom: 0.5rem; }
+
+        .prompt-section h2 {
+            font-size: 1.7rem;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.3px;
+        }
+
+        .prompt-problem {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .prompt-problem-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sage-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt-problem p {
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--gray);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .prompt-box-wrapper { margin-bottom: 2rem; }
+
+        .prompt-box-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .prompt-box-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sage);
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border: 1.5px solid var(--sage-pale);
+            background: white;
+            border-radius: 100px;
+            font-family: inherit;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--sage);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .copy-btn:hover { background: var(--sage-wash); border-color: var(--sage-light); }
+        .copy-btn.copied { background: var(--sage); border-color: var(--sage); color: white; }
+
+        .copy-btn svg { width: 14px; height: 14px; transition: all 0.2s ease; }
+        .copy-btn .icon-check { display: none; }
+        .copy-btn.copied .icon-copy { display: none; }
+        .copy-btn.copied .icon-check { display: block; }
+
+        .prompt-box {
+            background: var(--sage-wash);
+            border-left: 4px solid var(--sage);
+            border-radius: 0 16px 16px 0;
+            padding: 1.5rem 1.75rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--charcoal);
+            white-space: pre-wrap;
+            font-family: 'Source Sans 3', sans-serif;
+            box-shadow: 0 2px 12px rgba(91, 123, 109, 0.04);
+        }
+
+        .prompt-box .bracket { color: var(--coral-deep); font-weight: 500; }
+
+        .prompt-why {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: white;
+            border: 1px solid var(--cream-dark);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            box-shadow: 0 1px 6px rgba(45, 52, 54, 0.03);
+        }
+
+        .prompt-why-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+        .prompt-why-label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sage); margin-bottom: 4px; }
+        .prompt-why p { font-size: 0.95rem; color: var(--gray); line-height: 1.6; font-weight: 300; }
+
+        /* ═══════════════════════════════════════════ */
+        /*  CLOSING                                    */
+        /* ═══════════════════════════════════════════ */
+        .closing-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 4rem 0 6rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .closing-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 48px;
+            height: 2px;
+            background: var(--coral);
+        }
+
+        .closing-icon { width: 64px; height: 64px; margin: 0 auto 2rem; opacity: 0.5; }
+
+        .closing-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .closing-section h2 em { font-style: italic; color: var(--sage); }
+
+        .closing-text {
+            font-size: 1.05rem;
+            color: var(--gray);
+            line-height: 1.7;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        /* Upcoming packs */
+        .upcoming-packs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .upcoming-pack {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--cream-dark);
+            border: 1px solid var(--cream-dark);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--gray);
+            font-weight: 400;
+        }
+
+        .upcoming-pack .pack-dot {
+            width: 5px;
+            height: 5px;
+            background: var(--sage-pale);
+            border-radius: 50%;
+        }
+
+        .closing-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .closing-cta {
+            display: inline-block;
+            background: var(--sage);
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .closing-cta:hover {
+            background: var(--sage-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(91, 123, 109, 0.25);
+        }
+
+        .closing-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0.7rem 2rem;
+            background: white;
+            color: var(--sage);
+            border: 2px solid var(--sage-pale);
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .closing-secondary:hover { background: var(--sage-wash); border-color: var(--sage-light); }
+        .closing-secondary svg { width: 16px; height: 16px; }
+
+        .closing-free-link {
+            font-size: 0.9rem;
+            color: var(--sage-light);
+            text-decoration: none;
+            border-bottom: 1px solid var(--sage-pale);
+            transition: all 0.2s ease;
+            margin-bottom: 1rem;
+        }
+
+        .closing-free-link:hover { color: var(--sage); border-color: var(--sage); }
+
+        .closing-quote {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--sage);
+            line-height: 1.5;
+            margin-bottom: 2.5rem;
+        }
+
+        .closing-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+
+        .closing-brand-logo { display: flex; align-items: center; gap: 8px; }
+        .closing-brand-logo svg { width: 22px; height: 22px; }
+        .closing-brand-logo span { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--charcoal); }
+        .closing-brand-logo span em { font-style: italic; font-weight: 500; }
+        .closing-brand-tagline { font-size: 0.8rem; color: var(--gray-light); font-weight: 300; letter-spacing: 0.5px; }
+
+        /* ═══════════════════════════════════════════ */
+        /*  FOOTER                                     */
+        /* ═══════════════════════════════════════════ */
+        .guide-footer {
+            background: var(--charcoal);
+            color: var(--gray-light);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-logo em { font-style: italic; font-weight: 500; }
+        .guide-footer p { font-size: 0.9rem; }
+
+        /* ═══════════════════════════════════════════ */
+        /*  BACK TO TOP                                */
+        /* ═══════════════════════════════════════════ */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 80;
+            width: 42px;
+            height: 42px;
+            background: white;
+            border: 1.5px solid var(--sage-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            box-shadow: 0 2px 12px rgba(45, 52, 54, 0.08);
+        }
+
+        .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .back-to-top:hover { background: var(--sage-wash); border-color: var(--sage-light); }
+        .back-to-top svg { width: 18px; height: 18px; color: var(--sage); }
+
+        /* ═══════════════════════════════════════════ */
+        /*  SCROLL ANIMATIONS                          */
+        /* ═══════════════════════════════════════════ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .reveal-stagger.visible > * { opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.05s; }
+        .reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; }
+        .reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.15s; }
+        .reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.2s; }
+        .reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.25s; }
+        .reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.3s; }
+
+        /* ═══════════════════════════════════════════ */
+        /*  RESPONSIVE                                 */
+        /* ═══════════════════════════════════════════ */
+        @media (min-width: 1080px) {
+            .toc-sidebar { display: block; }
+            .toc-fab { display: none !important; }
+            .guide-main { padding: 0 3rem 0 2rem; }
+        }
+
+        @media (max-width: 1079px) {
+            .toc-fab { display: flex; }
+            .guide-main { padding: 0 2rem; }
+        }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .guide-nav-inner { padding: 0.85rem 1.25rem; }
+            .logo svg { width: 36px; height: 36px; }
+            .logo-wordmark { font-size: 1.2rem; }
+            .pack-badge { display: none; }
+            .nav-cta { padding: 0.55rem 1.1rem; font-size: 0.82rem; }
+            .guide-main { padding: 0 1.25rem; }
+            .welcome-banner { margin: 1.25rem 1.25rem 0; font-size: 0.85rem; padding: 0.85rem 1.25rem; }
+            .guide-hero { padding: 3rem 0 2.5rem; }
+            .guide-hero h1 { font-size: 1.9rem; }
+            .hero-subtitle { font-size: 1.05rem; }
+            .hero-orbit { width: 56px; height: 56px; }
+            .howto-section { padding: 2rem 0; }
+            .howto-section h2 { font-size: 1.5rem; }
+            .prompts-grid { grid-template-columns: 1fr; }
+            .prompt-section h2 { font-size: 1.4rem; }
+            .prompt-box { padding: 1.25rem; font-size: 0.9rem; }
+            .closing-section { padding: 3rem 0 4rem; }
+            .closing-section h2 { font-size: 1.6rem; }
+            .back-to-top { left: 16px; bottom: 16px; width: 38px; height: 38px; }
+            .toc-fab { bottom: 16px; right: 16px; width: 48px; height: 48px; font-size: 1.15rem; }
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /*  PRINT STYLES                               */
+        /* ═══════════════════════════════════════════ */
+        @media print {
+            body { background: white; font-size: 14px; }
+            .guide-nav, .toc-sidebar, .toc-fab, .toc-fab-panel, .toc-fab-overlay,
+            .back-to-top, .copy-btn, .prompts-overview, .closing-cta, .closing-secondary,
+            .premium-bar, .welcome-banner { display: none !important; }
+            .guide-layout { display: block; }
+            .guide-main { padding: 0 0.5in; }
+            .guide-hero { padding: 2rem 0; }
+            .guide-hero::before, .guide-hero::after { display: none; }
+            .closing-section::before { display: none; }
+            .prompt-section { page-break-inside: avoid; break-inside: avoid; margin-bottom: 2rem; padding-top: 1rem; }
+            .prompt-box { border-radius: 0 8px 8px 0; font-size: 12px; padding: 1rem 1.25rem; box-shadow: none; }
+            .prompt-why { box-shadow: none; }
+            .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; }
+            .guide-footer { padding: 1.5rem; }
+            a { text-decoration: none; color: inherit; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Premium accent bar -->
+<div class="premium-bar"></div>
+
+<!-- ═══════════════════════ NAVIGATION ═══════════════════════ -->
+<nav class="guide-nav">
+    <div class="guide-nav-inner">
+        <div class="nav-left">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+                <span class="logo-wordmark">My <em>Second Brain</em></span>
+            </a>
+            <span class="pack-badge">Prompt Pack</span>
+        </div>
+        <a href="/" class="nav-cta">More Packs</a>
+    </div>
+</nav>
+
+<!-- ═══════════════════════ LAYOUT ═══════════════════════ -->
+<div class="guide-layout">
+
+    <!-- Sidebar TOC (desktop) -->
+    <!-- EDIT: Update TOC links when changing prompts -->
+    <aside class="toc-sidebar">
+        <div class="toc-sticky">
+            <div class="toc-label">In This Pack</div>
+            <ul class="toc-list" id="toc-desktop">
+                <li><a href="#prompt-1"><span class="toc-emoji">📋</span> Supply List Decoder</a></li>
+                <li><a href="#prompt-2"><span class="toc-emoji">📧</span> First Day Email</a></li>
+                <li><a href="#prompt-3"><span class="toc-emoji">🗓️</span> Morning Routine</a></li>
+                <li><a href="#prompt-4"><span class="toc-emoji">🍱</span> Lunch Packing</a></li>
+                <li><a href="#prompt-5"><span class="toc-emoji">😰</span> Anxiety Game Plan</a></li>
+                <li><a href="#prompt-6"><span class="toc-emoji">📅</span> After-School Schedule</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="guide-main">
+
+        <!-- WELCOME BANNER -->
+        <div class="welcome-banner reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>Thank you for your purchase! This page is yours to bookmark and revisit anytime.</span>
+        </div>
+
+        <!-- HERO -->
+        <!-- EDIT: Pack title, subtitle, and prompt count -->
+        <header class="guide-hero">
+            <svg class="hero-orbit" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+            <div class="hero-badge">Prompt Pack</div>
+            <h1>Back to School <em>Survival Pack</em></h1>
+            <p class="hero-subtitle">15 AI prompts to get through September without losing your mind</p>
+            <p class="hero-note">This page is yours forever. Bookmark it, come back anytime.</p>
+            <div class="hero-divider"></div>
+        </header>
+
+        <!-- HOW TO USE -->
+        <section class="howto-section reveal">
+            <h2>How to use this pack</h2>
+            <p class="howto-intro">Each prompt is designed for a specific back-to-school situation. Copy, paste into any AI tool, fill in your details, and get personalized solutions in seconds.</p>
+
+            <div class="howto-steps">
+                <div class="howto-step">
+                    <div class="howto-step-num">1</div>
+                    <div class="howto-step-content">
+                        <h3>Pick the prompt that matches what's bugging you right now</h3>
+                        <p>Don't try them all at once. Start with the one that makes you go "oh, <em>THAT</em> one."</p>
+                    </div>
+                </div>
+                <div class="howto-step">
+                    <div class="howto-step-num">2</div>
+                    <div class="howto-step-content">
+                        <h3>Copy it into ChatGPT, Claude, or any AI tool</h3>
+                        <p>Paste the prompt exactly as written. Then fill in the [brackets] with YOUR specific details.</p>
+                    </div>
+                </div>
+                <div class="howto-step">
+                    <div class="howto-step-num">3</div>
+                    <div class="howto-step-content">
+                        <h3>Customize and iterate</h3>
+                        <p>The first answer is your starting point. Say "make it shorter," "more casual," or "try again but for a 4-year-old." It gets better the more you talk to it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="howto-closing">
+                That's it. No complicated setup. No tech skills needed. Just copy, paste, and survive September.
+            </div>
+        </section>
+
+        <!-- PROMPTS OVERVIEW -->
+        <!-- EDIT: Update grid when changing prompts -->
+        <section class="prompts-overview reveal">
+            <h2>What's inside</h2>
+            <p class="prompts-overview-sub">Click any prompt to jump straight to it.</p>
+            <div class="prompts-grid reveal-stagger">
+                <a href="#prompt-1"><span class="grid-emoji">📋</span><span><span class="grid-num">#1</span> The Supply List Decoder</span></a>
+                <a href="#prompt-2"><span class="grid-emoji">📧</span><span><span class="grid-num">#2</span> The "First Day" Teacher Email</span></a>
+                <a href="#prompt-3"><span class="grid-emoji">🗓️</span><span><span class="grid-num">#3</span> The Morning Routine Builder</span></a>
+                <a href="#prompt-4"><span class="grid-emoji">🍱</span><span><span class="grid-num">#4</span> The Lunch Packing System</span></a>
+                <a href="#prompt-5"><span class="grid-emoji">😰</span><span><span class="grid-num">#5</span> The Anxiety Game Plan</span></a>
+                <a href="#prompt-6"><span class="grid-emoji">📅</span><span><span class="grid-num">#6</span> The After-School Schedule Tamer</span></a>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             PROMPT SECTIONS
+             To add a new prompt, copy a prompt-section block and update:
+             - id="prompt-N"
+             - Prompt number, emoji, title
+             - Problem text
+             - Prompt box content + id
+             - copy-btn data-prompt attribute
+             - Why it works text
+             ═══════════════════════════════════════════════════════════ -->
+
+        <!-- ═══════════ PROMPT 1 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-1">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #1</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">📋</div>
+            <h2>The Supply List Decoder</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>You got "the list." It's 47 items long, half of them are brand-specific, and you need it done before next Tuesday. For three kids.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-1-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-1-text">Help me organize this school supply shopping.
+
+Here are the supply lists:
+<span class="bracket">[paste the actual list(s)]</span>
+Number of kids: <span class="bracket">[number]</span>
+Budget goal: <span class="bracket">[amount]</span>
+Stores I have access to: <span class="bracket">[Target, Walmart, Amazon, etc.]</span>
+
+Give me:
+- A consolidated shopping list (combine duplicates across kids)
+- Items I probably already have at home
+- A store-by-store shopping plan to minimize trips
+- Generic alternatives for brand-specific items to save money
+- Total estimated cost</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>It turns a chaotic multi-list nightmare into one efficient shopping trip. And it catches the stuff you already own.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 2 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-2">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #2</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">📧</div>
+            <h2>The "First Day" Teacher Email</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>You want to introduce yourself and your kid to the new teacher, mention important things they should know, but not be THAT parent. Fine line.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-2-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-2-text">Help me write a beginning-of-year email to my child's new teacher.
+
+Child's name and grade: <span class="bracket">[name, grade]</span>
+Teacher's name: <span class="bracket">[name]</span>
+Important things to know: <span class="bracket">[learning differences, allergies, family situation, anxiety, etc.]</span>
+Tone I want: <span class="bracket">[friendly but informative / brief / warm]</span>
+What I want to avoid: <span class="bracket">[oversharing, sounding demanding, being too long]</span>
+
+Keep it under <span class="bracket">[X]</span> sentences. I want to seem like a supportive, reasonable parent — not one who's going to email every week.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>It strikes that impossible balance between "here's what you need to know" and "I promise I'm not high-maintenance."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 3 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-3">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #3</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">🗓️</div>
+            <h2>The Morning Routine Builder</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>Last year's mornings were chaos. This year you want a routine that actually works — for your kids AND your sanity. But every "morning routine chart" on Pinterest assumes your kids are tiny robots.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-3-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-3-text">Help me build a realistic school morning routine.
+
+Number of kids and ages: <span class="bracket">[details]</span>
+School start time: <span class="bracket">[time]</span>
+Bus/drop-off time: <span class="bracket">[time]</span>
+What makes mornings hard: <span class="bracket">[slow eater, can't find shoes, meltdowns, etc.]</span>
+Non-negotiables: <span class="bracket">[breakfast together, making beds, etc.]</span>
+Things I'd like to include if possible: <span class="bracket">[reading time, exercise, etc.]</span>
+
+Build me a minute-by-minute timeline that:
+- Has buffer time built in
+- Accounts for the things that always go wrong
+- Includes what I should prep the night before
+- Is realistic for actual children, not Pinterest children</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>The "things that always go wrong" input is key. It plans around YOUR chaos, not some idealized morning.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 4 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-4">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #4</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">🍱</div>
+            <h2>The Lunch Packing System</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>It's 10pm. You haven't packed lunches. You're out of ideas. Your kid will reject anything that touched another food. Every. Single. Night.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-4-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-4-text">I need a school lunch system that doesn't make me want to cry.
+
+Number of kids: <span class="bracket">[number]</span>
+Ages: <span class="bracket">[ages]</span>
+Picky eating situation: <span class="bracket">[be honest — what will they actually eat?]</span>
+Allergies/restrictions: <span class="bracket">[nut-free school, dairy-free, etc.]</span>
+My prep willingness: <span class="bracket">[minimal/moderate/I'll batch-prep on Sunday]</span>
+Budget: <span class="bracket">[per week roughly]</span>
+
+Give me:
+- A 5-day lunch rotation I can repeat
+- A prep-ahead plan for Sunday
+- Substitution options for when I'm out of something
+- Snack ideas that aren't just goldfish crackers
+
+Keep it real. These are for actual children who will throw away anything "weird."</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>A rotating system means you only decide ONCE. Then it's autopilot.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 5 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-5">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #5</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">😰</div>
+            <h2>The Anxiety Game Plan</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>Your kid is anxious about starting school — new teacher, new kids, new routine. You want to help but "you'll be fine!" isn't cutting it. And honestly, you're anxious too.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-5-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-5-text">My <span class="bracket">[age]</span>-year-old is anxious about <span class="bracket">[starting school / new school / new teacher / specific fear]</span>.
+
+What they've said or shown: <span class="bracket">[describe the anxiety — what they say, behaviors you've noticed]</span>
+What's worked before: <span class="bracket">[if anything]</span>
+What makes it worse: <span class="bracket">[specific triggers]</span>
+Our situation: <span class="bracket">[new school? Same school new grade? Any big changes?]</span>
+
+Give me:
+- 3 things to say that actually validate their feelings (not "you'll be fine")
+- A simple prep activity we can do together before school starts
+- A morning-of script for when the anxiety peaks
+- A "code word" system idea for if they need help during the day
+- What to watch for that might mean they need more support</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>It goes beyond generic advice and gives you specific words and actions for YOUR kid's specific anxiety.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROMPT 6 ═══════════ -->
+        <section class="prompt-section reveal" id="prompt-6">
+            <div class="prompt-header">
+                <span class="prompt-number">Prompt #6</span>
+                <span class="prompt-number-line"></span>
+            </div>
+            <div class="prompt-emoji">📅</div>
+            <h2>The After-School Schedule Tamer</h2>
+
+            <div class="prompt-problem">
+                <div class="prompt-problem-label">The problem</div>
+                <p>Between homework, activities, playdates, and screen time negotiations, after-school hours are a free-for-all. Everyone's tired, hungry, and fighting. You need structure without becoming a drill sergeant.</p>
+            </div>
+
+            <div class="prompt-box-wrapper">
+                <div class="prompt-box-top">
+                    <span class="prompt-box-label">The prompt — copy & paste this</span>
+                    <button class="copy-btn" data-prompt="prompt-6-text">
+                        <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="copy-label">Copy</span>
+                    </button>
+                </div>
+                <div class="prompt-box" id="prompt-6-text">Help me create an after-school routine that keeps everyone sane.
+
+Kids and ages: <span class="bracket">[details]</span>
+School pickup time: <span class="bracket">[time]</span>
+Activities this semester: <span class="bracket">[list with days/times]</span>
+Homework situation: <span class="bracket">[amount, when it's due, kid's resistance level]</span>
+Dinner time goal: <span class="bracket">[time]</span>
+Bedtime: <span class="bracket">[time]</span>
+The biggest after-school problem: <span class="bracket">[fighting, screen time battles, homework meltdowns, etc.]</span>
+
+Build me a flexible after-school flow that includes:
+- Transition/decompression time (they need it)
+- Homework window
+- Activity logistics
+- Screen time boundaries that feel fair to them
+- Dinner prep I can do while they're occupied
+
+Don't make it rigid. Make it a flow, not a schedule.</div>
+            </div>
+
+            <div class="prompt-why">
+                <span class="prompt-why-icon">💡</span>
+                <div>
+                    <div class="prompt-why-label">Why it works</div>
+                    <p>"Flow, not schedule" is the key insight. Kids need structure AND flexibility, especially when they're tired.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CLOSING ═══════════ -->
+        <section class="closing-section reveal">
+            <svg class="closing-icon" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+
+            <h2>More packs <em>coming soon</em></h2>
+            <p class="closing-text">We're building prompt packs for every season of the chaos. Each one designed for the real stuff you're actually dealing with.</p>
+
+            <!-- EDIT: Update upcoming packs list -->
+            <div class="upcoming-packs">
+                <span class="upcoming-pack"><span class="pack-dot"></span>Holiday Survival Pack</span>
+                <span class="upcoming-pack"><span class="pack-dot"></span>Newborn Fog Pack</span>
+                <span class="upcoming-pack"><span class="pack-dot"></span>Summer Break Sanity Pack</span>
+            </div>
+
+            <div class="closing-links">
+                <a href="/" class="closing-cta">Visit mysecondbrain.xyz</a>
+                <button onclick="window.print()" class="closing-secondary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                    Save as PDF
+                </button>
+            </div>
+
+            <a href="/guide.html" class="closing-free-link">Haven't seen the free guide? Start with 10 AI Prompts That'll Give You Your Brain Back</a>
+
+            <p class="closing-quote">"You're doing great. Your brain<br>just needed backup."</p>
+
+            <div class="closing-brand">
+                <div class="closing-brand-logo">
+                    <svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="5" fill="#5B7B6D"/><circle cx="25" cy="25" r="2" fill="#7A9A8C"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#5B7B6D" stroke-width="1.4" fill="none" transform="rotate(-20 26 26)" opacity="0.6"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#7A9A8C" stroke-width="1.4" fill="none" transform="rotate(40 26 26)" opacity="0.45"/><ellipse cx="26" cy="26" rx="18" ry="8" stroke="#D4E2DB" stroke-width="1.3" fill="none" transform="rotate(-70 26 26)" opacity="0.35"/><circle cx="40" cy="18" r="2.8" fill="#E8A598"/><circle cx="13" cy="21" r="2" fill="#E8A598" opacity="0.55"/><circle cx="33" cy="39" r="1.6" fill="#E8A598" opacity="0.4"/></svg>
+                    <span>My <em>Second Brain</em></span>
+                </div>
+                <span class="closing-brand-tagline">AI-powered relief for the mental load</span>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="guide-footer">
+    <p class="footer-logo">My <em>Second Brain</em></p>
+    <p>AI-powered relief for the mental load</p>
+</footer>
+
+<!-- Mobile TOC FAB -->
+<!-- EDIT: Update mobile TOC links when changing prompts -->
+<button class="toc-fab" id="tocFab" aria-label="Table of contents">☰</button>
+<div class="toc-fab-overlay" id="tocOverlay"></div>
+<div class="toc-fab-panel" id="tocPanel">
+    <div class="toc-label">Jump to a prompt</div>
+    <ul class="toc-list">
+        <li><a href="#prompt-1" class="toc-mobile-link"><span class="toc-emoji">📋</span> The Supply List Decoder</a></li>
+        <li><a href="#prompt-2" class="toc-mobile-link"><span class="toc-emoji">📧</span> The "First Day" Teacher Email</a></li>
+        <li><a href="#prompt-3" class="toc-mobile-link"><span class="toc-emoji">🗓️</span> The Morning Routine Builder</a></li>
+        <li><a href="#prompt-4" class="toc-mobile-link"><span class="toc-emoji">🍱</span> The Lunch Packing System</a></li>
+        <li><a href="#prompt-5" class="toc-mobile-link"><span class="toc-emoji">😰</span> The Anxiety Game Plan</a></li>
+        <li><a href="#prompt-6" class="toc-mobile-link"><span class="toc-emoji">📅</span> The After-School Schedule Tamer</a></li>
+    </ul>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+    // ─── Copy to clipboard ───
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-prompt');
+            const box = document.getElementById(targetId);
+            const text = box.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.classList.add('copied');
+                btn.querySelector('.copy-label').textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.querySelector('.copy-label').textContent = 'Copy';
+                }, 2000);
+            });
+        });
+    });
+
+    // ─── Scroll reveal ───
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => revealObserver.observe(el));
+
+    // ─── Active TOC ───
+    const sections = document.querySelectorAll('.prompt-section');
+    const tocLinks = document.querySelectorAll('#toc-desktop a');
+
+    const tocObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                tocLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + id));
+            }
+        });
+    }, { threshold: 0.2, rootMargin: '-90px 0px -50% 0px' });
+
+    sections.forEach(section => tocObserver.observe(section));
+
+    // ─── Nav shadow ───
+    const nav = document.querySelector('.guide-nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+
+    // ─── Back to top ───
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => backBtn.classList.toggle('visible', window.scrollY > 600), { passive: true });
+    backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ─── Mobile TOC ───
+    const tocFab = document.getElementById('tocFab');
+    const tocPanel = document.getElementById('tocPanel');
+    const tocOverlay = document.getElementById('tocOverlay');
+
+    function closeToc() { tocPanel.classList.remove('open'); tocOverlay.classList.remove('open'); }
+
+    tocFab.addEventListener('click', () => {
+        const isOpen = tocPanel.classList.contains('open');
+        if (isOpen) closeToc();
+        else { tocPanel.classList.add('open'); tocOverlay.classList.add('open'); }
+    });
+
+    tocOverlay.addEventListener('click', closeToc);
+    document.querySelectorAll('.toc-mobile-link').forEach(link => link.addEventListener('click', closeToc));
+</script>
+
+</body>
+</html>

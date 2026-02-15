@@ -124,3 +124,10 @@ The user plans to add:
 - About page
 
 Keep architecture simple but extensible for these additions.
+
+## REQUIRED
+- **NEVER use 'rm -rf'** - it's blocked by the command-validator hook for safety
+- Use 'trash' instead: 'trash folder-name' or 'trash
+instead:
+file.txt'
+- Works exactly like 'rm -rf but moves to Trash instead of permanent deletion
